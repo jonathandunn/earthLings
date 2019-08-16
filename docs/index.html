@@ -5,10 +5,15 @@
         <link href="/earthLings/dist/d3-geomap.css" rel="stylesheet">
     </head>
     <body>
-        <div id="map">tester2</div>
+        <div id="map">tester3</div>
    
     <script src="https://unpkg.com/d3@5.9.2/dist/d3.min.js"></script>
     <script src="https://unpkg.com/topojson@3.0.2/dist/topojson.min.js"></script>
     <script src="/earthLings/dist/d3-geomap.min.js"></script>
+    <script>
+           var map = d3.geomap()
+    .geofile('/earthLings/dist/topojson/world/countries.json')
+    .draw(d3.select('#map'));
+        </script>
     </body>
 </html>
