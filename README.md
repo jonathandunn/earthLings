@@ -1,6 +1,6 @@
 # earthLings
 
-*Mapping languages and dialects with corpus data
+Corpus-based language mapping with the following features:
 
 
 ## Demographics
