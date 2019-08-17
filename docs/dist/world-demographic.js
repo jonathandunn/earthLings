@@ -1,7 +1,7 @@
 var map = d3.choropleth()
     .geofile('/earthLings/dist/topojson/world/countries.json')
     .colors(['red'])
-    .column('POPULATION')
+    .column('PCT_POPULATION')
     .legend(true)
     .unitId('iso3');
 
