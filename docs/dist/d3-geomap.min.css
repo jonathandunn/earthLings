@@ -4,12 +4,11 @@
 .d3-geomap .legend-bg{fill:#fff;fill-opacity:.8}
 .d3-geomap .legend-bar{stroke:#333;stroke-width:1px}
 .d3-geomap {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    overflow: auto;
+    height: 90%;
+    width: 90%;
+    height: 90vh;
+    width: 90vw;
+    margin: 0;
     background: rgba(51,51,51,0.7);
     z-index: 10;
   }
