@@ -1,6 +1,6 @@
 var map = d3.choropleth()
     .geofile('/earthLings/dist/topojson/world/countries.json')
-    .column('PCT_POPULATION')
+    .column('PCT_WORDS_CC4')
     .legend(true)
     .unitId('iso3');
 
