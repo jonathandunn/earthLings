@@ -3,7 +3,7 @@ var map = d3.choropleth()
     .colors(['red'])
     .column('POPULATION')
     .legend(true)
-    .unitId('ISO3');
+    .unitId('iso3');
 
 d3.csv('/earthLings/data/map.countries.csv').then(data => {
     map.draw(d3.select('#map').datum(data));
