@@ -4,8 +4,8 @@
 
 This project visualizes two datasets: 
 	
-	Twitter Corpus (8 billion words over two years) 
-	Web Corpus (400 billion words over ten years from <a href = "https://www.commoncrawl.org">the Common Crawl</a>)
+	Twitter Corpus (8 billion words, 2017-2019) 
+	Web Corpus (400 billion words, 2013-2019, from the Common Crawl)
 
 The per-country aggregates can be found in the *docs/data* folder as CSV files.
 
