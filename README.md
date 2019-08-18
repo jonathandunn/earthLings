@@ -17,9 +17,9 @@ For a description of data collection procedures and the language identification 
 
 You can also look at my related repositories:
 
-	Language ID: https://github.com/jonathandunn/idNet
+Language ID: https://github.com/jonathandunn/idNet
 	
-	Web Collection: https://github.com/jonathandunn/common_crawl_corpus
+Web Collection: https://github.com/jonathandunn/common_crawl_corpus
 
 ## Demographic variables
 
