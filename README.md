@@ -123,3 +123,8 @@ The *Dialects* page maps properties of computational dialect models based on syn
 
 *For Arabic*: F1 on combined Twitter and web corpus
 	
+## Minor Language Variables
+
+The *Minor Languages* page covers those languages which are not common enough to be shown on the *Major Languages* page. Many of these languages are rare in digital contexts. Languages are listed by their ISO3 codes, which can be found here:
+
+https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Languages/List_of_ISO_639-3_language_codes_(2019)
