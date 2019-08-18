@@ -13,7 +13,7 @@ var map = d3.choropleth()
     .geofile('/earthLings/dist/topojson/world/countries.json')
     .height('600')
     .rotate([0,0,0])
-    .projection(d3.geoAlbersUsa)
+    .projection(d3.geoEqualEarth)
     .column(currentColumn)
     .legend(true)
     .unitId('iso3');
