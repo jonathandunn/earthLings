@@ -4,8 +4,8 @@
 .d3-geomap .legend-bg{fill:#fff;fill-opacity:.8}
 .d3-geomap .legend-bar{stroke:#333;stroke-width:1px}
 .d3-geomap {
-    height: auto;
-    height: auto;
+    height: 80%;
+    height: 80vw;
     margin-left: auto;
     margin-right: auto;
     background: rgba(0,0,255,0.1);
