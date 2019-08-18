@@ -6,9 +6,7 @@ d3.select('#select-key').on('change', function(a) {
   // Change the current key and call the function to update the colors.
   currentColumn = d3.select(this).property('value');
   // Redo map
-  d3.csv('/earthLings/data/map.countries.csv').then(data => {
-    map.draw(d3.select('#map').datum(data));
-});
+  map.column(currentColumn).update()
 });
 
 var map = d3.choropleth()
