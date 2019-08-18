@@ -6,7 +6,7 @@ d3.select("#select-key").on("change", function(a) {
   // Change the current key and call the function to update the colors.
   currentColumn = d3.select(this).property("value");
   // Redo map
-  map.column(currentColumn).draw();
+  map.column(currentColumn).update();
 });
 
 var map = d3.choropleth()
