@@ -12,12 +12,13 @@ d3.select('#select-key').on('change', function(a) {
 var map = d3.choropleth()
     .geofile('/earthLings/dist/topojson/world/countries.json')
     .rotate([0,0,0])
-    .attr("viewBox", "0 0 " + w + " " + h )
-    .attr("preserveAspectRatio", "xMidYMid meet");
     .column(currentColumn)
     .legend(true)
     .unitId('iso3');
 
-d3.csv('/earthLings/data/map.countries.csv').then(data => {
+d3.csv('/earthLings/data/map.countries.csv')
+    .attr("viewBox", "0 0 " + w + " " + h )
+    .attr("preserveAspectRatio", "xMidYMid meet");
+    .then(data => {
     map.draw(d3.select('#map').datum(data));
 });
