@@ -1,10 +1,13 @@
 # earthLings
 
-Corpus-based language and dialect mapping.
+## Corpus-based language and dialect mapping
 
-This project visualizes two datasets: Twitter (8 billion words over two years) and web data (400 billion words over ten years).
+This project visualizes two datasets: 
+	
+	Twitter Corpus (8 billion words over two years) 
+	Web Corpus (400 billion words over ten years from <a href = "https://www.commoncrawl.org">the Common Crawl</a>)
 
-The data descriptions aggregated by country can be found in the *data* folder.
+The per-country aggregates can be found in the *docs/data* folder as CSV files.
 
 ## Demographic variables
 
