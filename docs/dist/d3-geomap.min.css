@@ -9,5 +9,6 @@
     margin-left: auto;
     margin-right: auto;
     background: rgba(0,0,255,0.1);
+    outline-width: thick;
     z-index: 10;
   }
