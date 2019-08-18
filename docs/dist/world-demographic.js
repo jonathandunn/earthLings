@@ -9,14 +9,6 @@ d3.select('#select-key').on('change', function(a) {
   map.column(currentColumn).update()
 });
 
-window.addEventListener('resize', resize); 
-
-function resize() {
-    var width = window.innerWidth, height = window.innerHeight;
-    svg.attr("width", width).attr("height", height);
-    force.size([width, height]).resume();
-}
-
 var map = d3.choropleth()
     .geofile('/earthLings/dist/topojson/world/countries.json')
     .rotate([0,0,0])
@@ -27,5 +19,3 @@ var map = d3.choropleth()
 d3.csv('/earthLings/data/map.countries.csv').then(data => {
     map.draw(d3.select('#map').datum(data));
 });
-
-resize()
