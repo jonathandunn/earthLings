@@ -2,8 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    
-	
 
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -18,7 +16,7 @@
 	  
   </head>
 
-	<body>
+<body>
 <table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
 <tbody>
 <tr>
@@ -54,70 +52,75 @@
 	
 	<td style="vertical-align: middle;">
 	<p style="text-align: center;">
-		<i>Select which corpus attributes to display</i></br>
+		
+	<i>Select which corpus attributes to display</i></br>
+	
 	<select id="select-data" class="three columns">
 	<option value="_CC4_" selected="selected">Dataset: Web Corpus</option>
 	<option value="_TW_">Dataset: Twitter Corpus</option>
 	</select>
-  <select id="select-type" class="three columns">
+ 	
+	<select id="select-type" class="three columns">
 	<option value="N_" selected="selected">Total Words Per Country</option>
 	<option value="Pct_">Percent of Usage Per Country</option>
 	</select>
-  <select id="select-language" class="three columns">
+ 	
+	<select id="select-language" class="three columns">
 	<option value="_eng" selected="selected">English</option>
 	<option value="_spa">Spanish</option>
-<option value="_fra">French</option>
-<option value="_ara">Arabic</option>
-<option value="_por">Portuguese</option>
-<option value="_rus">Russian</option>
-<option value="_ind">Indonesian</option>
-<option value="_tur">Turkish</option>
-<option value="_deu">German</option>
-<option value="_hin">Hindi</option>
-<option value="_tgl">Tagalog</option>
-<option value="_ita">Italian</option>
-<option value="_nld">Dutch</option>
-<option value="_urd">Urdu</option>
-<option value="_hbs">Serbo-Croatian</option>
-<option value="_tha">Thai</option>
-<option value="_ell">Greek</option>
-<option value="_fas">Farsi</option>
-<option value="_pol">Polish</option>
-<option value="_jpn">Japanese</option>
-<option value="_kor">Korean</option>
-<option value="_swe">Swedish</option>
-<option value="_fin">Finnish</option>
-<option value="_ben">Bengali</option>
-<option value="_ces">Czech</option>
-<option value="_dan">Danish</option>
-<option value="_mkd">Macedonian</option>
-<option value="_swa">Swahili</option>
-<option value="_slv">Slovenian</option>
-<option value="_nep">Nepali</option>
-<option value="_ron">Romanian</option>
-<option value="_tam">Tamil</option>
-<option value="_sqi">Albanian</option>
-<option value="_cat">Catalan</option>
-<option value="_vie">Vietnamese</option>
-<option value="_lav">Latvian</option>
-<option value="_heb">Hebrew</option>
-<option value="_hun">Hungarian</option>
-<option value="_bul">Bulgarian</option>
-<option value="_sin">Sinhala</option>
-<option value="_aze">Azerbaijani</option>
-<option value="_ukr">Ukrainian</option>
-<option value="_hye">Armenian</option>
-<option value="_est">Estonian</option>
-<option value="_mar">Marathi</option>
-<option value="_hat">Haitian</option>
-<option value="_zho">Mandarin</option>
-<option value="_nor">Norwegian</option>
-<option value="_mon">Mongolian</option>
-<option value="_jav">Javanese</option>
-<option value="_tel">Telugu</option>
-<option value="_lit">Lithuanian</option>
-<option value="_slk">Slovak</option>
+	<option value="_fra">French</option>
+	<option value="_ara">Arabic</option>
+	<option value="_por">Portuguese</option>
+	<option value="_rus">Russian</option>
+	<option value="_ind">Indonesian</option>
+	<option value="_tur">Turkish</option>
+	<option value="_deu">German</option>
+	<option value="_hin">Hindi</option>
+	<option value="_tgl">Tagalog</option>
+	<option value="_ita">Italian</option>
+	<option value="_nld">Dutch</option>
+	<option value="_urd">Urdu</option>
+	<option value="_hbs">Serbo-Croatian</option>
+	<option value="_tha">Thai</option>
+	<option value="_ell">Greek</option>
+	<option value="_fas">Farsi</option>
+	<option value="_pol">Polish</option>
+	<option value="_jpn">Japanese</option>
+	<option value="_kor">Korean</option>
+	<option value="_swe">Swedish</option>
+	<option value="_fin">Finnish</option>
+	<option value="_ben">Bengali</option>
+	<option value="_ces">Czech</option>
+	<option value="_dan">Danish</option>
+	<option value="_mkd">Macedonian</option>
+	<option value="_swa">Swahili</option>
+	<option value="_slv">Slovenian</option>
+	<option value="_nep">Nepali</option>
+	<option value="_ron">Romanian</option>
+	<option value="_tam">Tamil</option>
+	<option value="_sqi">Albanian</option>
+	<option value="_cat">Catalan</option>
+	<option value="_vie">Vietnamese</option>
+	<option value="_lav">Latvian</option>
+	<option value="_heb">Hebrew</option>
+	<option value="_hun">Hungarian</option>
+	<option value="_bul">Bulgarian</option>
+	<option value="_sin">Sinhala</option>
+	<option value="_aze">Azerbaijani</option>
+	<option value="_ukr">Ukrainian</option>
+	<option value="_hye">Armenian</option>
+	<option value="_est">Estonian</option>
+	<option value="_mar">Marathi</option>
+	<option value="_hat">Haitian</option>
+	<option value="_zho">Mandarin</option>
+	<option value="_nor">Norwegian</option>
+	<option value="_mon">Mongolian</option>
+	<option value="_jav">Javanese</option>
+	<option value="_tel">Telugu</option>
+	<option value="_lit">Lithuanian</option>
+	<option value="_slk">Slovak</option>
 	</select>
+	
 	</p>
 	</td>
 
@@ -146,10 +149,7 @@
 	<script src="/earthLings/dist/d3-geomap.js"></script>
 	<script src="/earthLings/dist/world-major.js"></script>
 	<script type = "text/javascript">
-		function changeData(){
-		var selData = document.getElementById("selData");
-		var data_suffix = selData.value;
- 		}
- </script>
+	  function changeData(){var selData = document.getElementById("selData"); var data_suffix = selData.value;}
+	</script>
 
 </html>
