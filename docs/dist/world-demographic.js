@@ -16,9 +16,6 @@ var map = d3.choropleth()
     .legend(true)
     .unitId('iso3');
 
-d3.csv('/earthLings/data/map.countries.csv')
-    .attr("viewBox", "0 0 " + w + " " + h )
-    .attr("preserveAspectRatio", "xMidYMid meet");
-    .then(data => {
+d3.csv('/earthLings/data/map.countries.csv').then(data => {
     map.draw(d3.select('#map').datum(data));
 });
