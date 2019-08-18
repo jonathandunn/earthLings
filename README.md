@@ -1,9 +1,12 @@
 # earthLings
 
-Corpus-based language mapping with the following features:
+Corpus-based language and dialect mapping.
 
+This project visualizes two datasets: Twitter (8 billion words over two years) and web data (400 billion words over ten years).
 
-## Demographics
+The data descriptions aggregated by country can be found in the *data* folder.
+
+## Demographic variables
 
 *Per_Capita_GDP*: Countries by UN GDP figures for the population
 
@@ -35,13 +38,13 @@ Corpus-based language mapping with the following features:
 
 *Internet_Adjusted_CC4*: Web corpus if everyone had internet access
 
-## Languages
+## Major Language Variables
 
 For every country, the percent of the Twitter / Web Corpus that is made up of a specific language (these account for 99% of both datasets):
 	
 English (eng), Spanish (spa), French (fra), Arabic (ara), Portuguese (por), Russian (rus), Indonesian (ind), Turkish (tur), German (deu), Hindi (hin), Tagalog (tgl), Italian (ita), Dutch (nld), Urdu (urd), Serbo-Croatian (hbs), Thai (tha), Greek (ell), Farsi (fas), Polish (pol), Japanese (jpn), Korean (kor), Swedish (swe), Finnish (fin), Bengali (ben), Czech (ces), Danish (dan), Macedonian (mkd), Swahili (swa), Slovenian (slv), Nepali (nep), Romanian (ron), Tamil (tam), Albanian (sqi), Catalan (cat), Vietnamese (vie), Latvian (lav), Hebrew (heb), Hungarian (hun), Bulgarian (bul), Sinhala (sin), Azerbaijani (aze), Ukrainian (ukr), Armenian (hye), Estonian (est), Marathi (mar), Haitian (hat), Mandarin (zho), Norwegian (nor), Mongolian (mon), Javanese (jav), Telugu (tel), Lithuanian (lit), Slovak (slk)
 
-## Dialects
+## Dialect Variables
 
 *For English and Spanish*: F1 on web corpus, F1 on Twitter, Uniqueness values on web corpus
 
