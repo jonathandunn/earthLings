@@ -1,8 +1,8 @@
 // We define a variable holding the current key to visualize on the map.
-var currentColumn = 'N_CC4_eng';
+var currentColumn = 'N_CC4_aai';
 var currentType = 'N_';
 var currentData = 'CC4_';
-var currentLanguage = 'eng';
+var currentLanguage = 'aai';
 
 // Listen to changes of the dropdown to select the key to visualize on the map.
 d3.select('#select-type').on('change', function(a) {
