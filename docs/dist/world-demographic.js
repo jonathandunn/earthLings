@@ -12,6 +12,7 @@ d3.select('#select-key').on('change', function(a) {
 var map = d3.choropleth()
     .geofile('/earthLings/dist/topojson/world/countries.json')
     .rotate([0,0,0])
+    .height('80vh')
     .column(currentColumn)
     .legend(true)
     .unitId('iso3');
