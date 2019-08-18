@@ -6,7 +6,8 @@
 .d3-geomap {
     width: 95%;
     width: 95vw;
-    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
     background: rgba(0,0,255,0.1);
     z-index: 10;
   }
