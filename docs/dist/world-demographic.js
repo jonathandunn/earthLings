@@ -1,5 +1,5 @@
 // We define a variable holding the current key to visualize on the map.
-var currentColumn = 'PCT_WORDS_CC4';
+var currentColumn = 'PER_CAPITA_GDP';
 
 // Listen to changes of the dropdown to select the key to visualize on the map.
 d3.select('#select-key').on('change', function(a) {
