@@ -9,15 +9,14 @@ d3.select("#select-key").on("change", function(a) {
   map.column(currentColumn).update();
 });
 
-var quantize = d3.scaleQuantize()
-    .ticks(25);
+var quantize = d3.scaleQuantize();
 
 var map = d3.choropleth()
     .geofile("/earthLings/dist/topojson/world/countries.json")
     .rotate([0,0,0])
     .column(currentColumn)
     .legend(true)
-    .valueScale(d3.scaleQuantize)
+    .valueScale(quantize)
     .unitId("iso3");
 
 d3.csv("/earthLings/data/map.countries.csv").then(data => {
