@@ -35,6 +35,7 @@ var map = d3.choropleth()
     .geofile('/earthLings/dist/topojson/world/countries.json')
     .rotate([0,0,0])
     .column(currentColumn)
+    .colors(['#ffffcc','#ffeda0','#fed976','#feb24c','#fd8d3c','#fc4e2a','#e31a1c','#bd0026','#800026'])
     .legend(true)
     .unitId('iso3');
 
