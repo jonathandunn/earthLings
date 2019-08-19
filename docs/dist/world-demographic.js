@@ -17,7 +17,6 @@ var map = d3.choropleth()
     .rotate([0,0,0])
     .column(currentColumn)
     .legend(true)
-    .valueScale(quantize)
     .unitId("iso3");
 
 d3.csv("/earthLings/data/map.countries.csv").then(data => {
