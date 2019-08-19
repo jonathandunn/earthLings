@@ -1,1 +1,98 @@
-<p>Coming tomorrow</p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css" rel="stylesheet">
+    <link href="/dist/d3-geomap.min.css" rel="stylesheet"> 
+	  
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+	  
+  </head>
+
+	<body>
+<table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+	<td style="vertical-align: middle; white-space: nowrap; padding-left: 35px;">
+	<div style="text-align: center;"> </div>
+	<h3 style="text-align: center;"><a href="http://www.earthlings.io">
+	<img style="border: 0px solid ; width: 263px; height: 72px;" alt="earthLings.io" src="earthlings.png"></a></h3>
+	</td>
+
+	<td style="vertical-align: middle; text-align: center; width: 100%;">
+	<a href="index.html">Demographics</a> | 
+	<a href="languages_major.html">Major Languages</a> | 
+	<a href="languages_minor.html">Minor Languages</a> | 
+	<a href="dialects.html">Dialects</a> | 
+	<a href="intro.html">Data Sources</a>
+	</td>
+		
+	<td style="vertical-align: middle; text-align: center; white-space: nowrap; padding-right: 35px;">
+	<a href="https://github.com/jonathandunn/earthLings">
+	<img style="border: 0px solid ;  width: 47px; height: 12px;" alt="GitHub.com" src="GitHub-Logo.png"></a>
+	</br><a href="intro.pdf">Quick Intro</a>
+	<br><a href="geocomputation.pdf">Documentation</a>
+	</td>
+		
+	<td style="vertical-align: middle;">
+	</td>
+</tr>
+
+<tr>
+	<td style="vertical-align: middle; white-space: nowrap; padding-left: 35px;">
+	<div style="text-align: center;"><big style="font-style: italic;">
+	Data-Driven Language and Dialect Mapping</big>
+	</div>
+	</td>
+	
+	<td style="vertical-align: middle;">
+	<p style="text-align: center;">
+
+	<select id="select-key" class="three columns">
+	<option value="PER_CAPITA_GDP" selected="selected">Demographics: Per Capita GDP</option>
+	<option value="PERCENT_INTERNET">Demographics: Percent of Population with Internet Access</option>
+	<option value="POPULATION">Demographics: Raw Population by Country</option>
+	<option value="GDP_ADJUSTED_POPULATION">Demographics: Population Adjusted by Per-Capita GDP</option>
+	<option value="N_WORDS_TW">Twitter: Corpus Size by Country</option>
+	<option value="POPULATION_ADJUSTED_TW">Twitter: Difference between Population and Corpus Size</option>
+	<option value="GDP_ADJUSTED_TW">Twitter: Corpus Distribution Adjusted by GDP</option>
+	<option value="INTERNET_ADJUSTED_TW">Twitter: Corpus Distribution Adjusted by Internet Usage</option>
+	<option value="N_WORDS_CC4">Web: Corpus Size by Country</option>
+	<option value="POPULATION_ADJUSTED_CC4">Web: Difference between Population and Corpus Size</option>
+	<option value="GDP_ADJUSTED_CC4">Web: Corpus Distribution Adjusted by GDP</option>
+	<option value="INTERNET_ADJUSTED_CC4">Web: Corpus Distribution Adjusted by Internet Usage</option>
+	</select>
+	<br><small>Click on a country to zoom in.</small>
+	</p>
+	</td>
+
+	<td style="vertical-align: middle; text-align: center; padding-right: 35px; white-space: nowrap;">
+	<a href="mailto:jonathan.dunn@canterbury.ac.nz">Contact</a><br>
+	<a href="https://www.jdunn.name">Jonathan Dunn</a><br>
+	</td>
+	
+	<td style="vertical-align: middle;"><br>
+	</td>
+</tr>
+</tbody>
+</table>
+					     
+       INFO HERE
+	
+	<p>Supported by <a href="https://www.canterbury.ac.nz/arts/schools-and-departments/linguistics/">the University of Canterbury</a> and <a href="https://www.canterbury.ac.nz/nzilbb/">the New Zealand Institute for Language, Brain and Behaviour</a>
+	</p>
+		
+        </body>
+	
+	<script src="//cdn.jsdelivr.net/bluebird/3.5.0/bluebird.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.js"></script>		
+	<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</html>
