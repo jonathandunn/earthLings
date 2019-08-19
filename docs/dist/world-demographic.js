@@ -14,7 +14,7 @@ var map = d3.choropleth()
     .rotate([0,0,0])
     .column(currentColumn)
     .legend(true)
-    .colors(['#543005','#8c510a','#bf812d','#dfc27d','#f6e8c3','#f5f5f5','#c7eae5','#80cdc1','#35978f','#01665e','#003c30', '#ffffff'])
+    .colors(['#ffffff', '#543005','#8c510a','#bf812d','#dfc27d','#f6e8c3','#f5f5f5','#c7eae5','#80cdc1','#35978f','#01665e','#003c30'])
     .unitId("iso3");
 
 d3.csv("/earthLings/data/map.countries.csv").then(data => {
