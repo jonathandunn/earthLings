@@ -15,7 +15,7 @@ var map = d3.choropleth()
     .column(currentColumn)
     .legend(true)
     .colors(['#a50026','#d73027','#f46d43','#fdae61','#fee090','#ffffbf','#e0f3f8','#abd9e9','#74add1','#4575b4','#313695'])
-    .valueScale(d3.scaleQuantile)
+    .valueScale(d3.scaleDiverging)
     .unitId("iso3");
 
 d3.csv("/earthLings/data/map.countries.csv").then(data => {
