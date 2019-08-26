@@ -38,8 +38,7 @@ d3.select('#select-language').on('change', function(a) {
 });
 
 var format_mil = function(d) {
-    d = d / 1000;
-    return d3.format(',.01f')(d) + ' thousand';
+    return (d);
 }
 
 var format_per = function(d) {
