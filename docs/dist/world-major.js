@@ -16,7 +16,7 @@ d3.select('#select-type').on('change', function(a) {
     var format = format_per;
 }
   // Redo map
-  map.column(currentColumn)..format(format).update()
+  map.column(currentColumn).format(format).update()
 });
 
 // Listen to changes of the dropdown to select the key to visualize on the map.
