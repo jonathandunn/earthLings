@@ -9,8 +9,14 @@ d3.select('#select-type').on('change', function(a) {
   // Change the current key and call the function to update the colors.
   currentType = d3.select(this).property('value');
   currentColumn = currentType + currentData + currentLanguage;
+  // Get the right format
+  if (currentType == 'N_') {
+    var format = format_mil;
+} else {
+    var format = format_per;
+}
   // Redo map
-  map.column(currentColumn).update()
+  map.column(currentColumn)..format(format).update()
 });
 
 // Listen to changes of the dropdown to select the key to visualize on the map.
@@ -47,7 +53,7 @@ var map = d3.choropleth()
     .column(currentColumn)
     .colors(['#ffffcc','#ffeda0','#fed976','#feb24c','#fd8d3c','#fc4e2a','#e31a1c','#bd0026','#800026'])
     .legend(true)
-    .format(format_per)
+    .format(format_mil)
     .unitId('iso3');
 
 d3.csv('/data/map.languages_major.csv').then(data => {
