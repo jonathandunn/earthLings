@@ -38,12 +38,16 @@ d3.select('#select-language').on('change', function(a) {
 });
 
 var format_mil = function(d) {
-    return Math.round(d);
+    return numberWithCommas(Math.round(d));
 }
 
 var format_per = function(d) {
     d = d * 100;
     return d3.format(',.03f')(d) + '%';
+}
+
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 var map = d3.choropleth()
