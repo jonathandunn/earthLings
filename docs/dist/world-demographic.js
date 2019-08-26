@@ -5,8 +5,16 @@ var currentColumn = "PER_CAPITA_GDP";
 d3.select("#select-key").on("change", function(a) {
   // Change the current key and call the function to update the colors.
   currentColumn = d3.select(this).property("value");
+  // Change number format
+  if (["PERCENT_INTERNET"].includes(currentColumn)) {
+      var format = format_per;
+  } else if (["PER_CAPITA_GDP", "GDP_ADJUSTED_POPULATION", "GDP_ADJUSTED_TW", "GDP_ADJUSTED_CC4"].includes(currentColumn)) {
+      var format = format_small;
+  } else {
+      var format = format_mil;
+  }
   // Redo map
-  map.column(currentColumn).update();
+  map.column(currentColumn).format(format).update();
 });
 
 var format_small = function(d) {
