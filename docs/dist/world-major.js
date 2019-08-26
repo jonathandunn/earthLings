@@ -31,12 +31,18 @@ d3.select('#select-language').on('change', function(a) {
   map.column(currentColumn).update()
 });
 
+var format = function(d) {
+    d = d / 1000000;
+    return d3.format(',.02f')(d) + 'M';
+}
+
 var map = d3.choropleth()
     .geofile('/dist/topojson/world/countries.json')
     .rotate([0,0,0])
     .column(currentColumn)
     .colors(['#ffffcc','#ffeda0','#fed976','#feb24c','#fd8d3c','#fc4e2a','#e31a1c','#bd0026','#800026'])
     .legend(true)
+    .format(format)
     .unitId('iso3');
 
 d3.csv('/data/map.languages_major.csv').then(data => {
