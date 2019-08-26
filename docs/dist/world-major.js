@@ -31,9 +31,14 @@ d3.select('#select-language').on('change', function(a) {
   map.column(currentColumn).update()
 });
 
-var format = function(d) {
+var format_mil = function(d) {
     d = d / 1000000;
     return d3.format(',.02f')(d) + 'M';
+}
+
+var format_per = function(d) {
+    d = d * 100;
+    return d3.format(',.01f')(d) + '%';
 }
 
 var map = d3.choropleth()
@@ -42,7 +47,7 @@ var map = d3.choropleth()
     .column(currentColumn)
     .colors(['#ffffcc','#ffeda0','#fed976','#feb24c','#fd8d3c','#fc4e2a','#e31a1c','#bd0026','#800026'])
     .legend(true)
-    .format(format)
+    .format(format_per)
     .unitId('iso3');
 
 d3.csv('/data/map.languages_major.csv').then(data => {
