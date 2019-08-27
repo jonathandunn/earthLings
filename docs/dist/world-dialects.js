@@ -1,5 +1,5 @@
 // We define a variable holding the current key to visualize on the map.
-var currentColumn = "ENG_F1_CC";
+var currentColumn = "Classification F1 for English (Web)";
 
 // Listen to changes of the dropdown to select the key to visualize on the map.
 d3.select("#select-key").on("change", function(a) {
