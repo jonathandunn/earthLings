@@ -1,14 +1,14 @@
 // We define a variable holding the current key to visualize on the map.
-var currentColumn = "PER_CAPITA_GDP";
+var currentColumn = "Per Capita GDP";
 
 // Listen to changes of the dropdown to select the key to visualize on the map.
 d3.select("#select-key").on("change", function(a) {
   // Change the current key and call the function to update the colors.
   currentColumn = d3.select(this).property("value");
   // Change number format
-  if (["PERCENT_INTERNET", "POPULATION_ADJUSTED_CC4", "POPULATION_ADJUSTED_TW"].includes(currentColumn)) {
+  if (["Percent Internet Access", "Web Adjusted for Population", "Twitter Adjusted for Population"].includes(currentColumn)) {
       var format = format_per;
-  } else if (["PER_CAPITA_GDP", "GDP_ADJUSTED_POPULATION", "GDP_ADJUSTED_TW", "GDP_ADJUSTED_CC4"].includes(currentColumn)) {
+  } else if (["Per Capita GDP", "Population Adjusted for GDP", "Twitter Adjusted for GDP", "Web Adjusted for GDP"].includes(currentColumn)) {
       var format = format_small;
   } else {
       var format = format_mil;
