@@ -1,7 +1,7 @@
 // We define a variable holding the current key to visualize on the map.
-var currentColumn = 'N_CC4_eng';
-var currentType = 'N_';
-var currentData = 'CC4_';
+var currentColumn = 'Total Words in Web Corpus eng';
+var currentType = 'Total Words in ';
+var currentData = 'Web Corpus ';
 var currentLanguage = 'eng';
 
 // Listen to changes of the dropdown to select the key to visualize on the map.
@@ -10,7 +10,7 @@ d3.select('#select-type').on('change', function(a) {
   currentType = d3.select(this).property('value');
   currentColumn = currentType + currentData + currentLanguage;
   // Get the right format
-  if (currentType == 'N_') {
+  if (currentType == 'Total Words in ') {
     var format = format_mil;
 } else {
     var format = format_per;
