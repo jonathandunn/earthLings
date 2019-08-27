@@ -1,4 +1,4 @@
-iso3,ENG_F1_CC,ENG_F1_TW,ENG_UNIQUE,SPA_F1_CC,SPA_F1_TW,SPA_UNIQUE,FRA_F1,FRA_UNIQUE,RUS_F1,RUS_UNIQUE,ARA_F1,DEU_F1,POR_F1
+iso3,Classification F1 for English (Web),Classification F1 for English (Twitter),Uniqueness Values for English (Web),Classification F1 for Spanish (Web),Classification F1 for Spanish (Twitter),Uniqueness Values for Spanish (Web),Classification F1 for French (Web),Uniqueness Values for French (Web),Classification F1 for Russian (Web),Uniqueness Values for Russian (Web),Classification F1 for Arabic (Web and Twitter),Classification F1 for German (Web),Classification F1 for Portuguese (Web)
 AGO,,,,,,,,,,,,,0.99
 ARE,,,,,,,,,,,1,,
 ARG,,,,0.94,0.87,-0.02,,,,,,,
