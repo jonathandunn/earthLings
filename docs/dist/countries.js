@@ -6,7 +6,7 @@ d3.select('#select-country').on('change', function(a) {
   // Change the current key and call the function to update the colors.
   currentType = d3.select(this).property('value');
   currentColumn = currentType;
-)}
+});
                                 
 var margin = {top: 40, right: 20, bottom: 30, left: 40},
     width = 960 - margin.left - margin.right,
