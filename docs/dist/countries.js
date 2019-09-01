@@ -34,8 +34,8 @@ var svg = d3.select("body").append("svg")
 
 svg.call(tip);
 
-d3.tsv("data.tsv", type, function(error, data) {
-  x.domain(data.map(function(d) { return d.letter; }));
+d3.csv("/data/map.countries.csv", type, function(error, data) {
+  x.domain(data.map(function(d) { return d.currentColumn; }));
   y.domain([0, d3.max(data, function(d) { return d.frequency; })]);
 
   svg.append("g")
