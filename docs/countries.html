@@ -8,60 +8,60 @@
     <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css" rel="stylesheet">
     
     <link href="/dist/d3-geomap.min.css" rel="stylesheet"> 
-<style>
+	<style>
 
-body {
-  font: 10px sans-serif;
-}
+	body {
+	  font: 10px sans-serif;
+	}
 
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
-}
+	.axis path,
+	.axis line {
+	  fill: none;
+	  stroke: #000;
+	  shape-rendering: crispEdges;
+	}
 
-.bar {
-  fill: orange;
-}
+	.bar {
+	  fill: orange;
+	}
 
-.bar:hover {
-  fill: orangered ;
-}
+	.bar:hover {
+	  fill: orangered ;
+	}
 
-.x.axis path {
-  display: none;
-}
+	.x.axis path {
+	  display: none;
+	}
 
-.d3-tip {
-  line-height: 1;
-  font-weight: bold;
-  padding: 12px;
-  background: rgba(0, 0, 0, 0.8);
-  color: #fff;
-  border-radius: 2px;
-}
+	.d3-tip {
+	  line-height: 1;
+	  font-weight: bold;
+	  padding: 12px;
+	  background: rgba(0, 0, 0, 0.8);
+	  color: #fff;
+	  border-radius: 2px;
+	}
 
-/* Creates a small triangle extender for the tooltip */
-.d3-tip:after {
-  box-sizing: border-box;
-  display: inline;
-  font-size: 10px;
-  width: 100%;
-  line-height: 1;
-  color: rgba(0, 0, 0, 0.8);
-  content: "\25BC";
-  position: absolute;
-  text-align: center;
-}
+	/* Creates a small triangle extender for the tooltip */
+	.d3-tip:after {
+	  box-sizing: border-box;
+	  display: inline;
+	  font-size: 10px;
+	  width: 100%;
+	  line-height: 1;
+	  color: rgba(0, 0, 0, 0.8);
+	  content: "\25BC";
+	  position: absolute;
+	  text-align: center;
+	}
 
-/* Style northward tooltips differently */
-.d3-tip.n:after {
-  margin: -1px 0 0 0;
-  top: 100%;
-  left: 0;
-}
-</style>
+	/* Style northward tooltips differently */
+	.d3-tip.n:after {
+	  margin: -1px 0 0 0;
+	  top: 100%;
+	  left: 0;
+	}
+	</style>
 	  
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -329,7 +329,7 @@ body {
         </body>
 	<script src="http://d3js.org/d3.v3.min.js"></script>
 	<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
-	
+	<script src="/dist/countries.js"></script>
 	<script type = "text/javascript">
 	  function changeData(){var selData = document.getElementById("selData"); var data_suffix = selData.value;}
 	</script>
