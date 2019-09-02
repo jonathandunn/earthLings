@@ -1,5 +1,6 @@
 // We define a variable holding the current key to visualize.
 var currentColumn = 'NZL';
+var dataset;
 
 // Function to trigger reading the data
 function run(dataset, currentColumn) {
@@ -14,9 +15,7 @@ d3.select('#select-country').on('change', function(a) {
 });
           
 // Parse the Data
-var dataset;
-
 d3.csv("/data/map.countries.csv", function(data){
-   dataset=data;
+   dataset = data;
    run(dataset, currentColumn);
    });
