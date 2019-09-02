@@ -1,5 +1,5 @@
 // We define a variable holding the current key to visualize.
-var currentColumn = 'nzl';
+var currentColumn = 'NZL';
 
 // Listen to changes of the dropdown to select the key to visualize.
 d3.select('#select-country').on('change', function(a) {
@@ -9,6 +9,5 @@ d3.select('#select-country').on('change', function(a) {
 });
                                 
 // Parse the Data
-d3.csv("/data/map.countries.csv").then(function(data) {
-  console.log(data[0]);
-});
+var data = d3.csvParse(d3.select("/data/map.countries.csv").text());
+console.log(data[0])
