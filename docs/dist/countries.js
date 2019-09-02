@@ -16,10 +16,10 @@ var results = Papa.parse("/data/map.countries.csv", {
 	}
 });
 
-var currentData = filterObject(currentColumn);
+var currentData = filterObject(results, currentColumn);
 console.log(currentData);
 
-function filterObject(fooValue) {
+function filterObject(results.data, fooValue) {
     return results.objects.filter(function(item) {
         return item.foo == fooValue;
     })
