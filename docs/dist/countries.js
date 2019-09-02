@@ -16,6 +16,6 @@ d3.select('#select-country').on('change', function(a) {
           
 // Parse the Data
 d3.csv("/data/map.countries.csv", function(data){
-   var dataset = data;
-   run(dataset, currentColumn);
-   });
+   var dataset = data;}
+   .then(run(dataset, currentColumn));
+   );
