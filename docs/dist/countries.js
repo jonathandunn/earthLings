@@ -13,7 +13,7 @@ var dataset;
 
 d3.csv("/data/map.countries.csv", function(data){
    dataset=data;
-  run(dataset, currentColumn)
+   run(dataset, currentColumn);
    });
 
 function run(dataset, currentColumn) {
