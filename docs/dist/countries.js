@@ -15,3 +15,13 @@ var results = Papa.parse("/data/map.countries.csv", {
 		console.log(results);
 	}
 });
+
+var currentData = filterObject(currentColumn);
+
+function filterObject(fooValue) {
+    return results.objects.filter(function(item) {
+        return item.foo == fooValue;
+    }
+}
+
+console.log(currentData);
