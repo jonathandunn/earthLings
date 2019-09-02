@@ -23,7 +23,7 @@ var svg = d3.select("#my_dataviz")
           "translate(" + margin.left + "," + margin.top + ")");
 
 // Parse the Data
-d3.csv(""/data/survey.countries.csv", function(data) {
+d3.csv("/data/survey.countries.csv", function(data) {
 
   // Add X axis
   var x = d3.scaleLinear()
