@@ -9,7 +9,7 @@ d3.select('#select-country').on('change', function(a) {
 });
                                 
 // Parse the Data
-var dataset = d3.csvParse("/data/map.countries.csv");
+var dataset = d3.csv("/data/map.countries.csv");
 
 
 function printData(input) {
