@@ -9,9 +9,7 @@ d3.select('#select-country').on('change', function(a) {
 });
                                 
 // Parse the Data
-var results = Papa.parse("/data/map.countries.csv", {
-	download: true,
-	complete: function(results) {
+var results = d3.csv("/data/map.countries.csv", function(results) {
 		console.log(results);
 	}
 });
