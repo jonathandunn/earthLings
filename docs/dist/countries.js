@@ -8,74 +8,61 @@ d3.select('#select-country').on('change', function(a) {
   currentColumn = currentType;
 });
                                 
-var margin = {top: 40, right: 20, bottom: 30, left: 40},
-    width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+<script>
 
-var formatPercent = d3.format(".0%");
 
-var x = d3.scale.ordinal()
-    .rangeRoundBands([0, width], .1);
+// set the dimensions and margins of the graph
+var margin = {top: 20, right: 30, bottom: 40, left: 90},
+    width = 460 - margin.left - margin.right,
+    height = 400 - margin.top - margin.bottom;
 
-var y = d3.scale.linear()
-    .range([height, 0]);
-
-var xAxis = d3.svg.axis()
-    .scale(x)
-    .orient("bottom");
-
-var yAxis = d3.svg.axis()
-    .scale(y)
-    .orient("left")
-    .tickFormat(formatPercent);
-
-var tip = d3.tip()
-  .attr('class', 'd3-tip')
-  .offset([-10, 0])
-  .html(function(d) {
-    return "<strong>Frequency:</strong> <span style='color:red'>" + d.currentColumn + "</span>";
-  })
-
-var svg = d3.select("body").append("svg")
+// append the svg object to the body of the page
+var svg = d3.select("#my_dataviz")
+  .append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")");
 
-svg.call(tip);
+// Parse the Data
+d3.csv(""/data/survey.countries.csv", function(data) {
 
-d3.csv("/data/map.countries.csv", type, function(error, data) {
-  x.domain(data.map(function(d) { return d.currentColumn; }));
-  y.domain([0, d3.max(data, function(d) { return d.currentColumn; })]);
-
+  // Add X axis
+  var x = d3.scaleLinear()
+    .domain([0, 13000])
+    .range([ 0, width]);
   svg.append("g")
-      .attr("class", "x axis")
-      .attr("transform", "translate(0," + height + ")")
-      .call(xAxis);
+    .attr("transform", "translate(0," + height + ")")
+    .call(d3.axisBottom(x))
+    .selectAll("text")
+      .attr("transform", "translate(-10,0)rotate(-45)")
+      .style("text-anchor", "end");
 
+  // Y axis
+  var y = d3.scaleBand()
+    .range([ 0, height ])
+    .domain(data.map(function(d) { return d.Country; }))
+    .padding(.1);
   svg.append("g")
-      .attr("class", "y axis")
-      .call(yAxis)
-    .append("text")
-      .attr("transform", "rotate(-90)")
-      .attr("y", 6)
-      .attr("dy", ".71em")
-      .style("text-anchor", "end")
-      .text("Frequency");
+    .call(d3.axisLeft(y))
 
-  svg.selectAll(".bar")
-      .data(data)
-    .enter().append("rect")
-      .attr("class", "bar")
-      .attr("x", function(d) { return x(d.letter); })
-      .attr("width", x.rangeBand())
-      .attr("y", function(d) { return y(d.currentColumn); })
-      .attr("height", function(d) { return height - y(d.currentColumn); })
-      .on('mouseover', tip.show)
-      .on('mouseout', tip.hide)
+  //Bars
+  svg.selectAll("myRect")
+    .data(data)
+    .enter()
+    .append("rect")
+    .attr("x", x(0) )
+    .attr("y", function(d) { return y(d.Country); })
+    .attr("width", function(d) { return x(d.Value); })
+    .attr("height", y.bandwidth() )
+    .attr("fill", "#69b3a2")
 
-});
 
-function type(d) {
-  return d;
-}
+    // .attr("x", function(d) { return x(d.Country); })
+    // .attr("y", function(d) { return y(d.Value); })
+    // .attr("width", x.bandwidth())
+    // .attr("height", function(d) { return height - y(d.Value); })
+    // .attr("fill", "#69b3a2")
+
+})
