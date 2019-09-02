@@ -16,4 +16,4 @@ var results = Papa.parse("/data/map.countries.csv", {
 	}
 });
 
-document.getElementById("demo").innerHTML = results;
+document.getElementById("demo").innerHTML = "helloworld!";
