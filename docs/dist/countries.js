@@ -11,8 +11,8 @@ d3.select('#select-country').on('change', function(a) {
 // Parse the Data
 var dataset = Papa.parse("/data/map.countries.csv", {
                 download: true,
-                complete: function(results) {
-                  console.log(results[0]);
+                complete: function(dataset) {
+                  console.log(dataset[0]);
                 }
               });
 
