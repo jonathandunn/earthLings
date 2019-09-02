@@ -13,4 +13,5 @@ d3.csv("/data/map.countries.csv").then(function(data) {
   console.log(data[0]);
 });
 
+console.log(data[4]);
 document.getElementById("demo").innerHTML = currentColumn;
