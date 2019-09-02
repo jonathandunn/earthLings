@@ -7,15 +7,10 @@ d3.select('#select-country').on('change', function(a) {
   currentType = d3.select(this).property('value');
   currentColumn = currentType;
 });
-                                
+          
 // Parse the Data
-var results = d3.csv("/data/map.countries.csv", function(results) {
-		console.log(results);
-	}
+d3.csv("/data/map.countries.csv").then(function(data) {
+  console.log(data[0]);
 });
-
-for (row in results.data) {
-  console.log(row[3]);
-} 
 
 document.getElementById("demo").innerHTML = currentColumn;
