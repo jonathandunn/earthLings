@@ -13,10 +13,8 @@ var dataset;
 
 d3.csv("/data/map.countries.csv", function(data){
    dataset=data;
+   console.log(dataset);
    });
-    setTimeout(function(){
-    console.log(dataset);
-    },200);
 
 console.log(dataset[4]);
 document.getElementById("demo").innerHTML = currentColumn;
