@@ -15,6 +15,6 @@ var currentData = filterObject(currentColumn);
 function filterObject(fooValue) {
     return data.objects.filter(function(item) {
         return item.foo == fooValue;
-    }
+    })
 }
 console.log(currentData)
