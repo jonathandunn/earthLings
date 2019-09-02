@@ -9,9 +9,9 @@ d3.select('#select-country').on('change', function(a) {
 });
           
 // Parse the Data
-d3.csv("/data/map.countries.csv").then(function(data) {
+var dataSet = d3.csv("/data/map.countries.csv").then(function(data) {
   console.log(data[0]);
 });
 
-console.log(data[4]);
+console.log(dataSet[4]);
 document.getElementById("demo").innerHTML = currentColumn;
