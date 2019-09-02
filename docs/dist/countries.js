@@ -17,11 +17,11 @@ var results = Papa.parse("/data/map.countries.csv", {
 });
 
 var currentData = filterObject(currentColumn);
+console.log(currentData);
 
 function filterObject(fooValue) {
     return results.objects.filter(function(item) {
         return item.foo == fooValue;
-    }
+    })
 }
 
-console.log(currentData);
