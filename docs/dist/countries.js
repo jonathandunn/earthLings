@@ -42,7 +42,7 @@ d3.csv(""/data/survey.countries.csv", function(data) {
   // Y axis
   var y = d3.scaleBand()
     .range([ 0, height ])
-    .domain(data.map(function(d) { return d.Country; }))
+    .domain(data.map(function(d) { return d.currentColumn; }))
     .padding(.1);
   svg.append("g")
     .call(d3.axisLeft(y))
@@ -53,8 +53,8 @@ d3.csv(""/data/survey.countries.csv", function(data) {
     .enter()
     .append("rect")
     .attr("x", x(0) )
-    .attr("y", function(d) { return y(d.Country); })
-    .attr("width", function(d) { return x(d.Value); })
+    .attr("y", function(d) { return y(d.currentColumn); })
+    .attr("width", function(d) { return x(d.currentColumn); })
     .attr("height", y.bandwidth() )
     .attr("fill", "#69b3a2")
 
