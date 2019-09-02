@@ -3,8 +3,8 @@ var currentColumn = 'NZL';
 var dataset;
 
 // Function to trigger reading the data
-function run(dataset, currentColumn) {
-   console.log(dataset[0]);
+function run(dataStuff, currentColumn) {
+   console.log(dataStuff[0]);
 }
 
 // Listen to changes of the dropdown to select the key to visualize.
