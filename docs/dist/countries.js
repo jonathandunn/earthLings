@@ -10,8 +10,6 @@ d3.select('#select-country').on('change', function(a) {
                                 
 // Parse the Data
 var dataset = d3.csvParse("/data/map.countries.csv");
-console.log(dataset[0])
-
 var currentData = filterObject(currentColumn);
 
 function filterObject(fooValue) {
@@ -19,4 +17,9 @@ function filterObject(fooValue) {
         return item.foo == fooValue;
     })
 }
-console.log(currentColumn)
+
+function printData(input) {
+  console.log(input)
+}
+
+printData(dataset)
