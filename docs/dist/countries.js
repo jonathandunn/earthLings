@@ -9,7 +9,7 @@ d3.select('#select-country').on('change', function(a) {
 });
                                 
 // Parse the Data
-var dataset = d3.csv("/data/map.countries.csv", function(data){});
+var dataset = d3.csv("/data/map.countries.csv");
 var currentData = filterObject(currentColumn);
 
 function filterObject(fooValue) {
