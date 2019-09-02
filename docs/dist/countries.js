@@ -13,8 +13,22 @@ d3.select('#select-country').on('change', function(a) {
   currentType = d3.select(this).property('value');
   currentColumn = currentType;
 });
-          
+         
 // Parse the Data
-d3.csv("/data/map.countries.csv") 
-         .then(function(data){dataset = data;})
-         .then(run(dataset, currentColumn));
+function doCSV(){
+          let k = new Promise(function(resolve, reject) {
+      d3.csv("/data/map.countries.csv" , function(error, data) {
+        console.log("sa")
+        data.forEach(function(d) {
+          console.log(data)
+        });
+        resolve(data)
+      })
+    });
+      return k;
+    }
+    doCSV().then(function(data) {
+      console.log(data)
+    });
+
+console.log(data)
