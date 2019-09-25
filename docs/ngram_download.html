@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link href="/dist/d3-geomap.min.css" rel="stylesheet">
+    <link href="/dist/font-awesome.css" rel="stylesheet">
+    <link href="/dist/bootstrap.css" rel="stylesheet">
+    <link href="/dist/default.css" rel="stylesheet">
+
+	<style>
+	#corpus {
+	  border-collapse: collapse;
+	  margin-left: auto;
+    	  margin-right: auto;
+	  text-align: right;
+	}
+	#corpus td, #corpus th {
+	  border: 1px solid #ddd;
+	  padding: 8px;
+	}
+	#corpus tr:nth-child(even){background-color: #f2f2f2;}
+	#corpus tr:hover {background-color: #ddd;}
+	#corpus th {
+	  padding-top: 12px;
+	  padding-bottom: 12px;
+	  text-align: right;
+	  background-color: #4CAF50;
+	  color: white;
+	}
+	</style>  	  
+  </head>
+
+<body>
+<table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+	<td style="vertical-align: middle; white-space: nowrap; padding-left: 35px;">
+	<div style="text-align: center;"> </div>
+	<h3 style="text-align: center;"><a href="http://www.earthlings.io">
+	<img style="border: 0px solid ; width: 263px; height: 72px;" alt="earthLings.io" src="earthlings.png"></a></h3>
+	</td>
+
+	<td style="vertical-align: middle; text-align: center; width: 100%;">
+	<a href="index.html">Demographics</a> | 
+	<a href="languages_major.html">Major Languages</a> | 
+	<a href="languages_minor.html">Minor Languages</a> | 
+	<a href="dialects.html">Dialects</a> | 
+	<a href="intro.html">Data Sources</a>
+	</td>
+		
+	<td style="vertical-align: middle; text-align: center; white-space: nowrap; padding-right: 35px;">
+	<a href="https://github.com/jonathandunn/earthLings">
+	<img style="border: 0px solid ;  width: 47px; height: 12px;" alt="GitHub.com" src="GitHub-Logo.png"></a>
+	</br><a href="intro.pdf">Quick Intro</a>
+	<br><a href="geocomputation.pdf">Documentation</a>
+	</td>
+		
+	<td style="vertical-align: middle;">
+	</td>
+</tr>
+
+<tr>
+	<td style="vertical-align: middle; white-space: nowrap; padding-left: 35px;">
+	<div style="text-align: center;"><big style="font-style: italic;">
+	Data-Driven Language and Dialect Mapping</big>
+	</div>
+	</td>
+	
+	<td style="vertical-align: middle;">
+	<p style="text-align: center;">
+	</p>
+	</td>
+
+	<td style="vertical-align: middle; text-align: center; padding-right: 35px; white-space: nowrap;">
+	<a href="mailto:jonathan.dunn@canterbury.ac.nz">Contact</a><br>
+	<a href="https://www.jdunn.name">Jonathan Dunn</a><br>
+	</td>
+	
+	<td style="vertical-align: middle;"><br>
+	</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p style = "font-weight: bold;" align="center">
+<br>Download the N-Gram Frequencies (by country and language)<br>
+</p>
+
+       <table id = "corpus">
+	<tbody>
+
+		<tr>
+
+			<td><br></td>
+
+			<td> 
+			<span style = "font-weight: bold;">
+			Web N-Grams</span> 
+			</td>
+
+			<td> 
+			<span style = "font-weight: bold;">
+			Twitter N-Grams</span> 
+			</td>
+
+		</tr>
+		<tr>
+
+			<td> 
+			<span>ara (Arabic)</span> 
+			</td>
+
+			<td> 
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span> 
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr>
+		<tr>
+
+			<td> 
+			<span>aze (Azerbaijani)</span> 
+			</td>
+
+			<td> <span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span> 
+			</td>
+
+			<td> 
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span> 
+			</td>
+
+		</tr>
+		<tr>
+
+			<td> 
+			<span>ben (Bengali)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span> 
+			</td>
+
+		</tr>
+		<tr>
+
+			<td> 
+			<span>bul (Bulgarian)</span> 
+			</td>
+
+			<td> 
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span> 
+			</td>
+
+			<td> 
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			</tr>
+			<tr>
+
+			<td>
+			<span>cat (Catalan)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span> 
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span> 
+			</td>
+
+		</tr>
+		<tr>
+
+			<td>
+			<span>ces (Czech)</span>
+			</td>
+
+			<td> 
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr>
+		<tr>
+
+			<td>
+			<span>dan (Danish)</span> 
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr>
+		<tr>
+
+			<td>
+			<span>deu (German)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr>
+		<tr>
+
+			<td>
+			<span>ell (Greek)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr>
+		<tr>
+
+			<td>
+			<span>eng (English)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr>
+		<tr>
+
+			<td>
+			<span>est (Estonian)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr>
+		<tr>
+
+			<td>
+			<span>fas (Farsi)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr>
+		<tr>
+
+			<td> 
+			<span>fin (Finnish)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr>
+		<tr>
+
+			<td>
+			<span>fra (French)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr>
+		<tr>
+
+			<td>
+			<span>hbs (Serbo-Croatian)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr>
+		<tr>
+
+			<td>
+			<span>heb (Hebrew)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td> 
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr>
+		<tr>
+
+			<td>
+			<span>hin (Hindi)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td> 
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr><tr>
+
+			<td>
+			<span>hun (Hungarian)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td> 
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr><tr>
+
+			<td>
+			<span>hye (Armenian)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td> 
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr><tr>
+
+			<td>
+			<span>ind (Indonesian)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td> 
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr><tr>
+
+			<td>
+			<span>ita (Italian)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td> 
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr><tr>
+
+			<td>
+			<span>jav (Javanese)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td> 
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr><tr>
+
+			<td>
+			<span>jpn (Japanese)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td> 
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr><tr>
+
+			<td>
+			<span>kor (Korean)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td> 
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr><tr>
+
+			<td>
+			<spanlav (Latvian)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td> 
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr><tr>
+
+			<td>
+			<span>lit (Lithuanian)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td> 
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr><tr>
+
+			<td>
+			<span>mar (Marathi)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td> 
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr><tr>
+
+			<td>
+			<span>mkd (Macedonian)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td> 
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr><tr>
+
+			<td>
+			<span>mon (Mongolian)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td> 
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr><tr>
+
+			<td>
+			<span>nep (Nepali)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td> 
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr><tr>
+
+			<td>
+			<span>nld (Dutch)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td> 
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr><tr>
+
+			<td>
+			<span>nor (Norwegian)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td> 
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr><tr>
+
+			<td>
+			<span>pol (Polish)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td> 
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr><tr>
+
+			<td>
+			<span>por (Portuguese)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td> 
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr><tr>
+
+			<td>
+			<span>ron (Romanian)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td> 
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr><tr>
+
+			<td>
+			<span>rus (Russian)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td> 
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr><tr>
+
+			<td>
+			<span>sin (Sinhala)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td> 
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr><tr>
+
+			<td>
+			<span>slv (Slovene)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td> 
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr><tr>
+
+			<td>
+			<span>spa (Spanish)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td> 
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr><tr>
+
+			<td>
+			<span>sqi (Albanian)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td> 
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr><tr>
+
+			<td>
+			<span>swa (Swahili)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td> 
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr><tr>
+
+			<td>
+			<span>swe (Swedish)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td> 
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr><tr>
+
+			<td>
+			<span>tam (Tamil)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td> 
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr><tr>
+
+			<td>
+			<span>tel (Telugu)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td> 
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr><tr>
+
+			<td>
+			<span>tgl (Tagalog)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td> 
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr><tr>
+
+			<td>
+			<span>tha (Thai)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td> 
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr><tr>
+
+			<td>
+			<span>tur (Turkish)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td> 
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr><tr>
+
+			<td>
+			<span>ukr (Ukrainian)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td> 
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr><tr>
+
+			<td>
+			<span>urd (Urdu)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td> 
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr>
+    <tr>
+
+			<td>
+			<span>vie (Vietnamese)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td> 
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr>
+    <tr>
+
+			<td>
+			<span>zho (Chinese)</span>
+			</td>
+
+			<td>
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+			<td> 
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span>
+			</td>
+
+		</tr>
+	</tbody>
+	</table>
+	
+	<p>
+	</br></br></br>Supported by <a href="https://www.canterbury.ac.nz/arts/schools-and-departments/linguistics/">the University of Canterbury</a> and <a href="https://www.canterbury.ac.nz/nzilbb/">the New Zealand Institute for Language, Brain and Behaviour</a>
+	</p>
+		
+        </body>
+	
+	<script src="/dist/bluebird.min.js"></script>
+	<script src="/dist/fetch.js"></script>		
+	<script src="/dist/jquery.js"></script>
+   	<script src="/dist/bootstrap.js"></script>
+	<script src="/dist/d3.js"></script>
+	<script src="/dist/topojson.js"></script>
+	<script src="/dist/d3-geomap.js"></script>
+</html>
