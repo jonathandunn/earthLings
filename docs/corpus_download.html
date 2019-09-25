@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link href="/dist/d3-geomap.min.css" rel="stylesheet">
+    <link href="/dist/font-awesome.css" rel="stylesheet">
+    <link href="/dist/bootstrap.css" rel="stylesheet">
+    <link href="/dist/default.css" rel="stylesheet">
+
+	<style>
+	#corpus {
+	  border-collapse: collapse;
+	  margin-left: auto;
+    	  margin-right: auto;
+	  text-align: right;
+	}
+	#corpus td, #corpus th {
+	  border: 1px solid #ddd;
+	  padding: 8px;
+	}
+	#corpus tr:nth-child(even){background-color: #f2f2f2;}
+	#corpus tr:hover {background-color: #ddd;}
+	#corpus th {
+	  padding-top: 12px;
+	  padding-bottom: 12px;
+	  text-align: right;
+	  background-color: #4CAF50;
+	  color: white;
+	}
+	</style>  	  
+  </head>
+
+<body>
+<table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+	<td style="vertical-align: middle; white-space: nowrap; padding-left: 35px;">
+	<div style="text-align: center;"> </div>
+	<h3 style="text-align: center;"><a href="http://www.earthlings.io">
+	<img style="border: 0px solid ; width: 263px; height: 72px;" alt="earthLings.io" src="earthlings.png"></a></h3>
+	</td>
+
+	<td style="vertical-align: middle; text-align: center; width: 100%;">
+	<a href="index.html">Demographics</a> | 
+	<a href="languages_major.html">Major Languages</a> | 
+	<a href="languages_minor.html">Minor Languages</a> | 
+	<a href="dialects.html">Dialects</a> | 
+	<a href="intro.html">Data Sources</a>
+	</td>
+		
+	<td style="vertical-align: middle; text-align: center; white-space: nowrap; padding-right: 35px;">
+	<a href="https://github.com/jonathandunn/earthLings">
+	<img style="border: 0px solid ;  width: 47px; height: 12px;" alt="GitHub.com" src="GitHub-Logo.png"></a>
+	</br><a href="intro.pdf">Quick Intro</a>
+	<br><a href="geocomputation.pdf">Documentation</a>
+	</td>
+		
+	<td style="vertical-align: middle;">
+	</td>
+</tr>
+
+<tr>
+	<td style="vertical-align: middle; white-space: nowrap; padding-left: 35px;">
+	<div style="text-align: center;"><big style="font-style: italic;">
+	Data-Driven Language and Dialect Mapping</big>
+	</div>
+	</td>
+	
+	<td style="vertical-align: middle;">
+	<p style="text-align: center;">
+	</p>
+	</td>
+
+	<td style="vertical-align: middle; text-align: center; padding-right: 35px; white-space: nowrap;">
+	<a href="mailto:jonathan.dunn@canterbury.ac.nz">Contact</a><br>
+	<a href="https://www.jdunn.name">Jonathan Dunn</a><br>
+	</td>
+	
+	<td style="vertical-align: middle;"><br>
+	</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p style = "font-weight: bold;" align="center">
+<br>Where does the data come from?<br>
+</p>
+
+       <table id = "corpus">
+	<tbody>
+
+		<tr>
+
+			<td><br></td>
+
+			<td> 
+			<span style = "font-weight: bold;">
+			<a href = "https://www.twitter.com">Link to Download</a></span> 
+			</td>
+
+			<td> 
+			<span style = "font-weight: bold;">
+			<a href = "https://www.commoncrawl.org">Size in Words</a></span> 
+			</td>
+
+		</tr>
+		<tr>
+
+			<td> 
+			<span>Africa, North</span> 
+			</td>
+
+			<td> 
+			<span><a href="ftp://publicdata.canterbury.ac.nz/">Download Location</a></span> 
+			</td>
+
+			<td>
+			<span>1,193,000,000</span>
+			</td>
+
+		</tr>
+		<tr>
+
+			<td> 
+			<span>Africa, Southern</span> 
+			</td>
+
+			<td> <span>159,807,000</span> 
+			</td>
+
+			<td> 
+			<span>26,868,000</span> 
+			</td>
+
+		</tr>
+		<tr>
+
+			<td> 
+			<span>Africa, Sub</span>
+			</td>
+
+			<td>
+			<span>571,644,000</span>
+			</td>
+
+			<td>
+			<span>5,847,670,000</span> 
+			</td>
+
+		</tr>
+		<tr>
+
+			<td> 
+			<span>America, Brazil</span> 
+			</td>
+
+			<td> 
+			<span>156,705,000</span> 
+			</td>
+
+			<td> 
+			<span>2,265,007,000</span>
+			</td>
+
+			</tr>
+			<tr>
+
+			<td>
+			<span>America, Central</span>
+			</td>
+
+			<td>
+			<span>852,793,000</span> 
+			</td>
+
+			<td>
+			<span>8,764,686,000</span> 
+			</td>
+
+		</tr>
+		<tr>
+
+			<td>
+			<span>America, North</span>
+			</td>
+
+			<td> 
+			<span>452,263,000</span>
+			</td>
+
+			<td>
+			<span>51,858,773,000</span>
+			</td>
+
+		</tr>
+		<tr>
+
+			<td>
+			<span>America, South</span> 
+			</td>
+
+			<td>
+			<span>824,502,000</span>
+			</td>
+
+			<td>
+			<span>21,991,710,000</span>
+			</td>
+
+		</tr>
+		<tr>
+
+			<td>
+			<span>Asia, Central</span>
+			</td>
+
+			<td>
+			<span>220,106,000</span>
+			</td>
+
+			<td>
+			<span>26,940,518,000</span>
+			</td>
+
+		</tr>
+		<tr>
+
+			<td>
+			<span>Asia, East</span>
+			</td>
+
+			<td>
+			<span>198,177,000</span>
+			</td>
+
+			<td>
+			<span>19,229,783,000</span>
+			</td>
+
+		</tr>
+		<tr>
+
+			<td>
+			<span>Asia, South</span>
+			</td>
+
+			<td>
+			<span>580,221,000</span>
+			</td>
+
+			<td>
+			<span>15,087,017,000</span>
+			</td>
+
+		</tr>
+		<tr>
+
+			<td>
+			<span>Asia, Southeast</span>
+			</td>
+
+			<td>
+			<span>443,258,000</span>
+			</td>
+
+			<td>
+			<span>21,100,289,000</span>
+			</td>
+
+		</tr>
+		<tr>
+
+			<td>
+			<span>Europe, East</span>
+			</td>
+
+			<td>
+			<span>748,654,000</span>
+			</td>
+
+			<td>
+			<span>65,366,344,000</span>
+			</td>
+
+		</tr>
+		<tr>
+
+			<td> 
+			<span>Europe, Russia</span>
+			</td>
+
+			<td>
+			<span>135,778,000</span>
+			</td>
+
+			<td>
+			<span>15,363,648,000</span>
+			</td>
+
+		</tr>
+		<tr>
+
+			<td>
+			<span>Europe, West</span>
+			</td>
+
+			<td>
+			<span>1,703,436,000</span>
+			</td>
+
+			<td>
+			<span>143,566,058,000</span>
+			</td>
+
+		</tr>
+		<tr>
+
+			<td>
+			<span>Middle East</span>
+			</td>
+
+			<td>
+			<span>421,926,000</span>
+			</td>
+
+			<td>
+			<span>1,721,259,000</span>
+			</td>
+
+		</tr>
+		<tr>
+
+			<td>
+			<span>Oceania</span>
+			</td>
+
+			<td>
+			<span>372,623,000</span>
+			</td>
+
+			<td> 
+			<span>1,580,569,000</span>
+			</td>
+
+		</tr>
+		<tr>
+
+		<td><span style = "font-weight: bold;">TOTAL</span></td>
+
+		<td><span style = "font-weight: bold;">8.04 billion words</span></td>
+
+		<td><span style = "font-weight: bold;">401.90 billion words</span></td>
+
+		</tr>
+	</tbody>
+	</table>
+	
+	<p>
+	</br></br></br>Supported by <a href="https://www.canterbury.ac.nz/arts/schools-and-departments/linguistics/">the University of Canterbury</a> and <a href="https://www.canterbury.ac.nz/nzilbb/">the New Zealand Institute for Language, Brain and Behaviour</a>
+	</p>
+		
+        </body>
+	
+	<script src="/dist/bluebird.min.js"></script>
+	<script src="/dist/fetch.js"></script>		
+	<script src="/dist/jquery.js"></script>
+   	<script src="/dist/bootstrap.js"></script>
+	<script src="/dist/d3.js"></script>
+	<script src="/dist/topojson.js"></script>
+	<script src="/dist/d3-geomap.js"></script>
+</html>
