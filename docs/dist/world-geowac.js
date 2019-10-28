@@ -1,5 +1,5 @@
 // We define a variable holding the current key to visualize on the map.
-var currentColumn = 'Total Words in Web Corpus eng';
+var currentColumn = 'eng_inner';
 var currentLanguage = 'eng_inner';
 
 // Listen to changes of the dropdown to select the key to visualize on the map.
@@ -19,7 +19,7 @@ var format_mil = function(d) {
 var map = d3.choropleth()
     .geofile('/dist/topojson/world/countries.json')
     .rotate([0,0,0])
-    .column(currentColumn)
+    .column(currentLanguage)
     .colors(['#ffffcc','#ffeda0','#fed976','#feb24c','#fd8d3c','#fc4e2a','#e31a1c','#bd0026','#800026'])
     .legend(true)
     .format(format_mil)
