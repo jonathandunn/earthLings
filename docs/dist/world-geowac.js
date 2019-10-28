@@ -3,17 +3,11 @@ var currentColumn = 'Total Words in Web Corpus eng';
 var currentLanguage = 'eng_inner';
 
 // Listen to changes of the dropdown to select the key to visualize on the map.
-d3.select('#select-type').on('change', function(a) {
+d3.select('#select-language').on('change', function(a) {
   // Change the current key and call the function to update the colors.
-  currentType = d3.select(this).property('value');
+  currentLanguage = d3.select(this).property('value');
   currentColumn = currentLanguage;
-  // Get the right format
-  if (currentType == 'Total Words in ') {
-    var format = format_mil;
-} else {
-    var format = format_per;
-}
-  // Redo map
+   // Redo map
   map.column(currentColumn).format(format).update()
 });
 
