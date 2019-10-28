@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">    
+    <link href="/dist/d3-geomap.min.css" rel="stylesheet">
+    <link href="/dist/font-awesome.css" rel="stylesheet">
+    <link href="/dist/bootstrap.css" rel="stylesheet">
+    <link href="/dist/default.css" rel="stylesheet">
+  </head>
+
+<body>
+<table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+	<td style="vertical-align: middle; white-space: nowrap; padding-left: 35px;">
+	<div style="text-align: center;"> </div>
+	<h3 style="text-align: center;"><a href="http://www.earthlings.io">
+	<img style="border: 0px solid ; width: 263px; height: 72px;" alt="earthLings.io" src="earthlings.png"></a></h3>
+	</td>
+
+	<td style="vertical-align: middle; text-align: center; width: 100%;">
+	<a href="index.html">Demographics</a> | 
+	<a href="languages_major.html">Major Languages</a> | 
+	<a href="languages_minor.html">Minor Languages</a> | 
+	<a href="dialects.html">Dialects</a> | 
+	<a href="intro.html">Data Sources</a>
+	</td>
+		
+	<td style="vertical-align: middle; text-align: center; white-space: nowrap; padding-right: 35px;">
+	<a href="https://github.com/jonathandunn/earthLings">
+	<img style="border: 0px solid ;  width: 47px; height: 12px;" alt="GitHub.com" src="GitHub-Logo.png"></a>
+	</br><a href="intro.pdf">Quick Intro</a>
+	<br><a href="geocomputation.pdf">Documentation</a>
+	</td>
+		
+	<td style="vertical-align: middle;">
+	</td>
+</tr>
+
+<tr>
+	<td style="vertical-align: middle; white-space: nowrap; padding-left: 35px;">
+	<div style="text-align: center;"><big style="font-style: italic;">
+	Data-Driven Language and Dialect Mapping</big>
+	</div>
+		<p style="text-align: center;"><a href="corpus_download.html">Download Corpora</a> | <a href="ngram_download.html">Download N-Grams</a></p>
+	</td>
+	
+	<td style="vertical-align: middle;">
+	<p style="text-align: center;">
+	
+	<select id="select-data" class="three columns">
+	<option value="Web Corpus " selected="selected">Dataset: Web Corpus</option>
+	<option value="Twitter Corpus ">Dataset: Twitter Corpus</option>
+	</select>
+ 	
+	<select id="select-type" class="three columns">
+	<option value="Total Words in " selected="selected">Total Words Per Country</option>
+	<option value="Percent of Country for ">Percent of Usage Per Country</option>
+	</select>
+ 	
+	<select id="select-language" class="three columns">
+	<option value="eng" selected="selected">English</option>
+	<option value="spa">Spanish</option>
+	<option value="fra">French</option>
+	<option value="ara">Arabic</option>
+	<option value="por">Portuguese</option>
+	<option value="rus">Russian</option>
+	<option value="ind">Indonesian</option>
+	<option value="tur">Turkish</option>
+	<option value="deu">German</option>
+	<option value="hin">Hindi</option>
+	<option value="tgl">Tagalog</option>
+	<option value="ita">Italian</option>
+	<option value="nld">Dutch</option>
+	<option value="urd">Urdu</option>
+	<option value="hbs">Serbo-Croatian</option>
+	<option value="tha">Thai</option>
+	<option value="ell">Greek</option>
+	<option value="fas">Farsi</option>
+	<option value="pol">Polish</option>
+	<option value="jpn">Japanese</option>
+	<option value="kor">Korean</option>
+	<option value="swe">Swedish</option>
+	<option value="fin">Finnish</option>
+	<option value="ben">Bengali</option>
+	<option value="ces">Czech</option>
+	<option value="dan">Danish</option>
+	<option value="mkd">Macedonian</option>
+	<option value="swa">Swahili</option>
+	<option value="slv">Slovenian</option>
+	<option value="nep">Nepali</option>
+	<option value="ron">Romanian</option>
+	<option value="tam">Tamil</option>
+	<option value="sqi">Albanian</option>
+	<option value="cat">Catalan</option>
+	<option value="vie">Vietnamese</option>
+	<option value="lav">Latvian</option>
+	<option value="heb">Hebrew</option>
+	<option value="hun">Hungarian</option>
+	<option value="bul">Bulgarian</option>
+	<option value="sin">Sinhala</option>
+	<option value="aze">Azerbaijani</option>
+	<option value="ukr">Ukrainian</option>
+	<option value="hye">Armenian</option>
+	<option value="est">Estonian</option>
+	<option value="mar">Marathi</option>
+	<option value="hat">Haitian</option>
+	<option value="zho">Mandarin</option>
+	<option value="nor">Norwegian</option>
+	<option value="mon">Mongolian</option>
+	<option value="jav">Javanese</option>
+	<option value="tel">Telugu</option>
+	<option value="lit">Lithuanian</option>
+	<option value="slk">Slovak</option>
+	</select>
+	<br><small>Click on a country to zoom in.</small>
+	</p>
+	</td>
+
+	<td style="vertical-align: middle; text-align: center; padding-right: 35px; white-space: nowrap;">
+	<a href="mailto:jonathan.dunn@canterbury.ac.nz">Contact</a><br>
+	<a href="https://www.jdunn.name">Jonathan Dunn</a>
+	</td>
+	
+	<td style="vertical-align: middle;"><br>
+	</td>
+</tr>
+</tbody>
+</table>
+					     
+        <div id="map" class="d3-geomap"></div>
+	<p>Supported by <a href="https://www.canterbury.ac.nz/arts/schools-and-departments/linguistics/">the University of Canterbury</a> and <a href="https://www.canterbury.ac.nz/nzilbb/">the New Zealand Institute for Language, Brain and Behaviour</a>
+	</p>       
+        </body>
+	
+	<script src="/dist/bluebird.min.js"></script>
+	<script src="/dist/fetch.js"></script>		
+	<script src="/dist/jquery.js"></script>
+   	<script src="/dist/bootstrap.js"></script>
+	<script src="/dist/d3.js"></script>
+	<script src="/dist/topojson.js"></script>
+	<script src="/dist/d3-geomap.js"></script>
+	<script src="/dist/world-major.js"></script>
+
+	<script type = "text/javascript">
+	  function changeData(){var selData = document.getElementById("selData"); var data_suffix = selData.value;}
+	</script>
+</html>
