@@ -1,14 +1,12 @@
 // We define a variable holding the current key to visualize on the map.
-var currentColumn = 'eng_inner';
 var currentLanguage = 'eng_inner';
 
 // Listen to changes of the dropdown to select the key to visualize on the map.
 d3.select('#select-language').on('change', function(a) {
   // Change the current key and call the function to update the colors.
   currentLanguage = d3.select(this).property('value');
-  currentColumn = currentLanguage;
   // Redo map
-  map.column(currentColumn).update()
+  map.column(currentLanguage).update()
 });
 
 var format_mil = function(d) {
