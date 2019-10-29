@@ -2,16 +2,18 @@
 
 ## Corpus-based language and dialect mapping
 
-This project visualizes two datasets: 
+This project visualizes three datasets: 
 	
 	Twitter Corpus (8 billion words, 2017-2019) 
 	Web Corpus (400 billion words, 2013-2019, from the Common Crawl)
+	GeoWAC (42 billion words; geographically-balanced gigaword corpora for 48 languages)
 
 The per-country aggregates can be found in the *docs/data* folder as CSV files.
 
 View this project through GitHub Pages: https://jonathandunn.github.io/earthLings/
 
-The full web dataset will be available soon through this repository. For now, a 16 billion word sub-set can be accessed here: https://labbcat.canterbury.ac.nz/download/?jonathandunn/CGLU_v3
+The full web dataset will be available soon through this repository: 
+http://www.earthlings.io/corpus_download.html
 
 For a description of data collection procedures and the language identification component, see this paper: https://jonathandunn.github.io/earthLings/geocomputation.pdf
 
