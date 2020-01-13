@@ -59,6 +59,6 @@ var map = d3.choropleth()
     .format(format_mil)
     .unitId('iso3');
 
-d3.csv('/data/map.languages_minor.csv').then(data => {
+d3.csv('/data/map.languages_major.csv').then(data => {
     map.draw(d3.select('#map').datum(data));
 });
