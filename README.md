@@ -4,15 +4,15 @@
 
 This project visualizes three datasets: 
 	
-	Twitter Corpus (8 billion words, 2017-2019) 
-	Web Corpus (400 billion words, 2013-2019, from the Common Crawl)
+	Twitter Corpus (12.87 billion words, 2017-2019) 
+	Web Corpus (443.06 billion words, 2013-2019, from the Common Crawl)
 	GeoWAC (42 billion words; geographically-balanced gigaword corpora for 48 languages)
 
 The per-country aggregates can be found in the *docs/data* folder as CSV files.
 
 View this project through GitHub Pages: https://jonathandunn.github.io/earthLings/
 
-The full web dataset will be available soon through this repository: 
+The full web dataset is now available through this repository: 
 http://www.earthlings.io/corpus_download.html
 
 For a description of data collection procedures and the language identification component, see this paper: https://jonathandunn.github.io/earthLings/geocomputation.pdf
