@@ -22,8 +22,7 @@ var format_small = function(d) {
 }
 
 var format_mil = function(d) {
-    d = d / 1000000;
-    return d3.format(',.02f')(d) + 'M';
+    return d
 }
 
 var format_per = function(d) {
