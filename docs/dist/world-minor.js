@@ -38,8 +38,8 @@ d3.select('#select-language').on('change', function(a) {
 });
 
 var format_mil = function(d) {
-    return numberWithCommas(Math.round(d));
-}
+    d = d;
+    return d3.format(',.00f')(d);
 
 var format_per = function(d) {
     d = d * 100;
