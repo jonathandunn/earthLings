@@ -4,8 +4,8 @@
 
 This project visualizes three datasets: 
 	
-	Twitter Corpus (12.87 billion words, 2017-2019) 
-	Web Corpus (443.06 billion words, 2013-2019, from the Common Crawl)
+	Twitter Corpus (13.70 billion words, 2017-2019) 
+	Web Corpus (423 billion words, 2013-2019, from the Common Crawl)
 	GeoWAC (42 billion words; geographically-balanced gigaword corpora for 48 languages)
 
 The per-country aggregates can be found in the *docs/data* folder as CSV files.
