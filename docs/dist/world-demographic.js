@@ -22,7 +22,8 @@ var format_small = function(d) {
 }
 
 var format_mil = function(d) {
-    return d
+    d = d;
+    return d3.format(',.00f')(d);
 }
 
 var format_per = function(d) {
