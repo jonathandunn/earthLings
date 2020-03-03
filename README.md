@@ -5,10 +5,12 @@
 This project visualizes three datasets: 
 	
 	Twitter Corpus 
-		(13.70 billion words, 2017-2019) 
+		(13.70 billion words, 2017-2020) 
+		
 	Corpus of Global Language Use
 		(ISLRN: 951-235-998-601-3)
 		(423 billion words, 2013-2019, from the Common Crawl)
+		
 	GeoWAC 
 		(ISLRN: 946-519-559-042-9)
 		(42 billion words; geographically-balanced gigaword corpora for 48 languages)
