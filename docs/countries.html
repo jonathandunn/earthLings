@@ -16,7 +16,7 @@
     <link href="/dist/font-awesome.css" rel="stylesheet">
     <link href="/dist/bootstrap.css" rel="stylesheet">
     <link href="/dist/default.css" rel="stylesheet">
-	
+
 	<style>
 	.axis path,
 	.axis line {
@@ -65,7 +65,48 @@
 	  top: 100%;
 	  left: 0;
 	}
-	</style>
+	
+	#corpus {
+	  border-collapse: collapse;
+	  margin-left: auto;
+    	  margin-right: auto;
+	  text-align: right;
+	}
+
+	#corpus td, #corpus th {
+	  border: 1px solid #ddd;
+	  padding: 8px;
+	}
+
+	#corpus tr:nth-child(even){background-color: #f2f2f2;}
+
+	#corpus tr:hover {background-color: #ddd;}
+
+	#corpus th {
+	  padding-top: 12px;
+	  padding-bottom: 12px;
+	  text-align: right;
+	  background-color: #4CAF50;
+	  color: white;
+	}
+		
+	a:link {
+	  background-color: azure;
+	  color: black;
+	}
+
+	a:visited {
+	  background-color: cyan;
+	}
+
+	a:hover {
+	  background-color: aliceblue;
+	}
+
+	a:active {
+	  background-color: hotpink;
+	} 
+</style>  	  
   </head>
 
 <body>
@@ -83,14 +124,14 @@
 	<a href="languages_major.html">Major Languages</a> | 
 	<a href="languages_minor.html">Minor Languages</a> | 
 	<a href="dialects.html">Dialects</a> | 
+	<a href="geowac_map.html">GeoWAC</a> | 
 	<a href="intro.html">Data Sources</a>
 	</td>
 		
 	<td style="vertical-align: middle; text-align: center; white-space: nowrap; padding-right: 35px;">
 	<a href="https://github.com/jonathandunn/earthLings">
 	<img style="border: 0px solid ;  width: 47px; height: 12px;" alt="GitHub.com" src="GitHub-Logo.png"></a>
-	</br><a href="intro.pdf">Quick Intro</a>
-	<br><a href="geocomputation.pdf">Documentation</a>
+	<br><a href="documentation.html">Documentation</a>
 	</td>
 		
 	<td style="vertical-align: middle;">
@@ -99,8 +140,8 @@
 
 <tr>
 	<td style="vertical-align: middle; white-space: nowrap; padding-left: 35px;">
-	<div style="text-align: center;"><big style="font-style: italic;">
-	Data-Driven Language and Dialect Mapping</big>
+	<div style="text-align: left;">
+	<i><b>Data-Driven Language and Dialect Mapping</b></i>
 	</div>
 		<p style="text-align: center;"><a href="corpus_download.html">Download Corpora</a> | <a href="ngram_download.html">Download N-Grams</a></p>
 	</td>
