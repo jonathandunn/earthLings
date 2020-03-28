@@ -151,18 +151,10 @@
 	<p style="text-align: center;">
 
 	<select id="select-key" class="three columns">
-	<option value="Per Capita GDP">Demographics: Per Capita GDP</option>
-	<option value="Percent Internet Access">Demographics: Percent of Population with Internet Access</option>
-	<option value="Population">Demographics: Raw Population by Country</option>
-	<option value="Population Adjusted for GDP">Demographics: Population Adjusted by Per-Capita GDP</option>
-	<option value="Twitter Total Words Per Country">Twitter: Corpus Size by Country</option>
-	<option value="Twitter Adjusted for Population">Twitter: Difference between Population and Corpus Size</option>
-	<option value="Twitter Adjusted for GDP">Twitter: Corpus Distribution Adjusted by GDP</option>
-	<option value="Twitter Adjusted for Internet Access">Twitter: Corpus Distribution Adjusted by Internet Usage</option>
-	<option value="Web Total Words Per Country" selected="selected">Web: Corpus Size by Country</option>
-	<option value="Web Adjusted for Population">Web: Difference between Population and Corpus Size</option>
-	<option value="Web Adjusted for GDP">Web: Corpus Distribution Adjusted by GDP</option>
-	<option value="Web Adjusted for Internet Access">Web: Corpus Distribution Adjusted by Internet Usage</option>
+	<option value="N_Languages">Twitter: Number of Languages</option>
+	<option value="Variance">Twitter: Variance</option>
+	<option value="Skewness">Twitter: Skewness</option>
+	<option value="Kurtosis">Twitter: Kurtosis</option>
 	</select>
 	<br><small>Click on a country to zoom in.</small>
 	</p>
@@ -195,7 +187,7 @@
 	<script src="/dist/d3.js"></script>
 	<script src="/dist/topojson.js"></script>
 	<script src="/dist/d3-geomap.js"></script>
-	<script src="/dist/world-demographic.js"></script>
+	<script src="/dist/world-diversity.js"></script>
 
 	<script type = "text/javascript">
 		function changeData(){
