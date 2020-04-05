@@ -14,24 +14,18 @@
 </head>
 
 <body>
-<div w3-include-html="header1.html"></div>
+<div w3-include-html="header.html"></div>
 
 <td style="vertical-align: middle;">
 <p style="text-align: center;">
 	Coming soon!
 </p>
-
-<div w3-include-html="header2.html"></div>	
+	
+<div id="map" class="d3-geomap"></div>
+<div w3-include-html="footer.html"></div>	
 					     
-        <div id="map" class="d3-geomap"></div>
-	<p>Supported by <a href="https://www.canterbury.ac.nz/arts/schools-and-departments/linguistics/">the University of Canterbury</a> and <a href="https://www.canterbury.ac.nz/nzilbb/">the New Zealand Institute for Language, Brain and Behaviour</a>
-	</p>
-	
-<script>
-includeHTML();
-</script>
-	
-        </body>
+<script>includeHTML();</script>
+</body>
 	
 	<script src="/dist/bluebird.min.js"></script>
 	<script src="/dist/fetch.js"></script>		
