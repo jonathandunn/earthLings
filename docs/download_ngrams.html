@@ -1,879 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-70470337-2"></script>
-<script src="/dist/ga.js"></script>
-
 <meta charset="utf-8">
-<link href="/dist/d3-geomap.min.css" rel="stylesheet">
-<link href="/dist/font-awesome.css" rel="stylesheet">
-<link href="/dist/bootstrap.css" rel="stylesheet">
-<link href="/dist/default.css" rel="stylesheet">  	  
+
+<head>
+	<script src="/dist/includes.js"></script>
+	<div w3-include-html="/files/head.html"></div>
 </head>
 
 <body>
-<table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+<div w3-include-html="/files/header.html"></div>
+<hr>
+	
+<p style = "font-weight: bold;" align="center">
+Download the N-Gram Frequencies
+</p>
+
+<p>
+(By Country, Language, Register)
+</p>
+
+<table id = "corpus">
 <tbody>
 <tr>
-	
-<td style="vertical-align: middle; white-space: nowrap; padding-left: 35px;">
-	<div style="text-align: center;">
-	<h3 style="text-align: center;"><a href="http://www.earthlings.io">
-	<img style="border: 0px solid" alt="earthLings.io" src="earthlings.png"></a></h3></div>
-</td>
-
-<td style="vertical-align: middle; text-align: center; width: 100%;">
-<div class="dropdown">
-<button class="dropbtn">Language Maps</button>
-<div class="dropdown-content">
-<a href="index.html">Corpora and Demographics</a>
-<a href="languages_major.html">Major Languages</a>
-<a href="languages_minor.html">Minor Languages</a>
-<a href="geowac_map.html">Population-balanced Corpora</a>
-</div>
-</div>
-
-<div class="dropdown">
-<button class="dropbtn">Language Diversity</button>
-<div class="dropdown-content">
-<a href="diversity.html">Diversity by Country</a>
-<a href="diversity_urban.html">Diversity for Major Cities</a>
-<a href="diversity_time.html">Diversity over Time</a>
-</div>
-</div>
-
-<div class="dropdown">
-<button class="dropbtn">Language Variation</button>
-<div class="dropdown-content">
-<a href="dialects.html">Dialect Classification</a>
-<a href="similarity_geo.html">Similarity between Countries</a>
-<a href="similarity_register.html">Similarity between Registers</a>
-</div>
-</div>
-
-<div class="dropdown">
-<button class="dropbtn">Documentation</button>
-<div class="dropdown-content">
-<a href="intro.pdf">Short Introduction</a>
-<a href="documentation.html">Academic Papers</a>
-<a href="https://www.github.com/jonathandunn/common_crawl_corpus/">Code: Data Collection</a>
-<a href="https://www.github.com/jonathandunn/idNet/">Code: Language ID</a>
-<a href="https://www.github.com/jonathandunn/earthLings/">Code: Mapping Site</a>
-</div>
-</div>
-
-<div class="dropdown">
-<button class="dropbtn">Downloads</button>
-<div class="dropdown-content">
-<a href="intro.html">Data Sources</a>
-<a href="download_cglu.html">Corpus of Global Language Use v.4.2</a>
-<a href="download_geowac.html">GeoWAC v.1.0</a>
-<a href="download_ngrams.html">Geograms (ngrams)</a>
-</div>
-</div>
-</td>
-		
-<td style="vertical-align: middle; text-align: center; white-space: nowrap; padding-right: 35px;">
-	<a href="https://www.jdunn.name">Jonathan Dunn</a><br>
-	<a href="https://www.canterbury.ac.nz/engineering/contact-us/people/ben-adams.html">Ben Adams</a><br>
-</td>
-		
-	<td style="vertical-align: middle;">
-	</td>
+	<td><br></td>
+	<td><span style = "font-weight: bold;"> Web N-Grams</span></td>
+	<td><span style = "font-weight: bold;"> Twitter N-Grams</span></td>
 </tr>
-
 <tr>
-	<td style="vertical-align: top; white-space: nowrap; padding-left: 35px;">
-	<div style="text-align: center;">
-	<p style="text-align: center;"><b>Data-Driven Language Mapping</b></p>
-	</div>
-	</td>
-	
-	<td style="vertical-align: middle;">
-	<p style="text-align: center;">
-	</p>
-		</td>
-
-	<td style="vertical-align: middle; text-align: center; padding-right: 35px; white-space: nowrap;">
-	<a href="https://www.canterbury.ac.nz/arts/schools-and-departments/linguistics/"><img style="border: 0px solid" alt="University of Canterbury Linguistics" src="ling.png"></a>
-	</td>
-	
-	<td style="vertical-align: middle;">
-	</td>
+	<td><span>ara (Arabic)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/ara/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/ara/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>aze (Azerbaijani)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/aze/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/aze/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>ben (Bengali)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/ben/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/ben/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>bul (Bulgarian)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/bul/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/bul/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>cat (Catalan)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/cat/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/cat/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>ces (Czech)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/ces/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/ces/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>dan (Danish)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/dan/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/dan/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>deu (German)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/deu/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/deu/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>ell (Greek)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/ell/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/ell/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>eng (English)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/eng/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/eng/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>est (Estonian)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/est/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/est/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>fas (Farsi)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/fas/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/fas/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>fin (Finnish)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/fin/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/fin/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>fra (French)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/fra/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/fra/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>hbs (Serbo-Croatian)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/hbs/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/hbs/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>heb (Hebrew)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/heb/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/heb/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>hin (Hindi)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/hin/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/hin/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>hun (Hungarian)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/hun/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/hun/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>hye (Armenian)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/hye/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/hye/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>ind (Indonesian)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/ind/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/ind/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>ita (Italian)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/ita/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/ita/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>jav (Javanese)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/jav/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/jav/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>jpn (Japanese)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/jpn/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/jpn/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>kor (Korean)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/kor/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/kor/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>lav (Latvian)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/lav/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/lav/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>lit (Lithuanian)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/lit/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/lit/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>mar (Marathi)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/mar/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/mar/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>mkd (Macedonian)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/mkd/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/mkd/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>mon (Mongolian)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/mon/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/mon/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>nep (Nepali)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/nep/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/nep/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>nld (Dutch)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/nld/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/nld/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>nor (Norwegian)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/nor/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/nor/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>pol (Polish)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/pol/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/pol/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>por (Portuguese)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/por/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/por/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>ron (Romanian)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/ron/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/ron/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>rus (Russian)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/rus/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/rus/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>sin (Sinhala)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/sin/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/sin/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>slv (Slovene)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/slv/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/slv/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>spa (Spanish)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/spa/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/spa/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>sqi (Albanian)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/sqi/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/sqi/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>swa (Swahili)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/swa/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/swa/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>swe (Swedish)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/swe/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/swe/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>tam (Tamil)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/tam/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/tam/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>tel (Telugu)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/tel/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/tel/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>tgl (Tagalog)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/tgl/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/tgl/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>tha (Thai)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/tha/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/tha/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>tur (Turkish)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/tur/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/tur/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>ukr (Ukrainian)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/ukr/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/ukr/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>urd (Urdu)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/urd/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/urd/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>vie (Vietnamese)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/vie/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/vie/">Download Location</a></span></td>
+</tr>
+<tr>
+	<td><span>zho (Chinese)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/zho/">Download Location</a></span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/zho/">Download Location</a></span></td>
 </tr>
 </tbody>
 </table>
-<hr>
-<p style = "font-weight: bold;" align="center">
-	<br>Download the N-Gram Frequencies </p>
-<p>(By Country, Language, Register)
-</p>
-
-       <table id = "corpus">
-	<tbody>
-
-		<tr>
-
-			<td><br></td>
-
-			<td> 
-			<span style = "font-weight: bold;">
-			Web N-Grams</span> 
-			</td>
-
-			<td> 
-			<span style = "font-weight: bold;">
-			Twitter N-Grams</span> 
-			</td>
-
-		</tr>
-		<tr>
-
-			<td> 
-			<span>ara (Arabic)</span> 
-			</td>
-
-			<td> 
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/ara/">Download Location</a></span> 
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/ara/">Download Location</a></span>
-			</td>
-
-		</tr>
-		<tr>
-
-			<td> 
-			<span>aze (Azerbaijani)</span> 
-			</td>
-
-			<td> <span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/aze/">Download Location</a></span> 
-			</td>
-
-			<td> 
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/aze/">Download Location</a></span> 
-			</td>
-
-		</tr>
-		<tr>
-
-			<td> 
-			<span>ben (Bengali)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/ben/">Download Location</a></span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/ben/">Download Location</a></span> 
-			</td>
-
-		</tr>
-		<tr>
-
-			<td> 
-			<span>bul (Bulgarian)</span> 
-			</td>
-
-			<td> 
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/bul/">Download Location</a></span> 
-			</td>
-
-			<td> 
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/bul/">Download Location</a></span>
-			</td>
-
-			</tr>
-			<tr>
-
-			<td>
-			<span>cat (Catalan)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/cat/">Download Location</a></span> 
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/cat/">Download Location</a></span> 
-			</td>
-
-		</tr>
-		<tr>
-
-			<td>
-			<span>ces (Czech)</span>
-			</td>
-
-			<td> 
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/ces/">Download Location</a></span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/ces/">Download Location</a></span>
-			</td>
-
-		</tr>
-		<tr>
-
-			<td>
-			<span>dan (Danish)</span> 
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/dan/">Download Location</a></span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/dan/">Download Location</a></span>
-			</td>
-
-		</tr>
-		<tr>
-
-			<td>
-			<span>deu (German)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/deu/">Download Location</a></span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/deu/">Download Location</a></span>
-			</td>
-
-		</tr>
-		<tr>
-
-			<td>
-			<span>ell (Greek)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/ell/">Download Location</a></span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/ell/">Download Location</a></span>
-			</td>
-
-		</tr>
-		<tr>
-
-			<td>
-			<span>eng (English)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/eng/">Download Location</a></span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/eng/">Download Location</a></span>
-			</td>
-
-		</tr>
-		<tr>
-
-			<td>
-			<span>est (Estonian)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/est/">Download Location</a></span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/est/">Download Location</a></span>
-			</td>
-
-		</tr>
-		<tr>
-
-			<td>
-			<span>fas (Farsi)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/fas/">Download Location</a></span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/fas/">Download Location</a></span>
-			</td>
-
-		</tr>
-		<tr>
-
-			<td> 
-			<span>fin (Finnish)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/fin/">Download Location</a></span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/fin/">Download Location</a></span>
-			</td>
-
-		</tr>
-		<tr>
-
-			<td>
-			<span>fra (French)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/fra/">Download Location</a></span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/fra/">Download Location</a></span>
-			</td>
-
-		</tr>
-		<tr>
-
-			<td>
-			<span>hbs (Serbo-Croatian)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/hbs/">Download Location</a></span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/hbs/">Download Location</a></span>
-			</td>
-
-		</tr>
-		<tr>
-
-			<td>
-			<span>heb (Hebrew)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/heb/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/heb/">Download Location</a></span>
-			</td>
-
-		</tr>
-		<tr>
-
-			<td>
-			<span>hin (Hindi)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/hin/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/hin/">Download Location</a></span>
-			</td>
-
-		</tr><tr>
-
-			<td>
-			<span>hun (Hungarian)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/hun/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/hun/">Download Location</a></span>
-			</td>
-
-		</tr><tr>
-
-			<td>
-			<span>hye (Armenian)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/hye/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/hye/">Download Location</a></span>
-			</td>
-
-		</tr><tr>
-
-			<td>
-			<span>ind (Indonesian)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/ind/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/ind/">Download Location</a></span>
-			</td>
-
-		</tr><tr>
-
-			<td>
-			<span>ita (Italian)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/ita/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/ita/">Download Location</a></span>
-			</td>
-
-		</tr><tr>
-
-			<td>
-			<span>jav (Javanese)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/jav/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/jav/">Download Location</a></span>
-			</td>
-
-		</tr><tr>
-
-			<td>
-			<span>jpn (Japanese)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/jpn/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/jpn/">Download Location</a></span>
-			</td>
-
-		</tr><tr>
-
-			<td>
-			<span>kor (Korean)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/kor/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/kor/">Download Location</a></span>
-			</td>
-
-		</tr><tr>
-
-			<td>
-			<span>lav (Latvian)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/lav/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/lav/">Download Location</a></span>
-			</td>
-
-		</tr><tr>
-
-			<td>
-			<span>lit (Lithuanian)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/lit/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/lit/">Download Location</a></span>
-			</td>
-
-		</tr><tr>
-
-			<td>
-			<span>mar (Marathi)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/mar/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/mar/">Download Location</a></span>
-			</td>
-
-		</tr><tr>
-
-			<td>
-			<span>mkd (Macedonian)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/mkd/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/mkd/">Download Location</a></span>
-			</td>
-
-		</tr><tr>
-
-			<td>
-			<span>mon (Mongolian)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/mon/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/mon/">Download Location</a></span>
-			</td>
-
-		</tr><tr>
-
-			<td>
-			<span>nep (Nepali)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/nep/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/nep/">Download Location</a></span>
-			</td>
-
-		</tr><tr>
-
-			<td>
-			<span>nld (Dutch)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/nld/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/nld/">Download Location</a></span>
-			</td>
-
-		</tr><tr>
-
-			<td>
-			<span>nor (Norwegian)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/nor/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/nor/">Download Location</a></span>
-			</td>
-
-		</tr><tr>
-
-			<td>
-			<span>pol (Polish)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/pol/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/pol/">Download Location</a></span>
-			</td>
-
-		</tr><tr>
-
-			<td>
-			<span>por (Portuguese)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/por/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/por/">Download Location</a></span>
-			</td>
-
-		</tr><tr>
-
-			<td>
-			<span>ron (Romanian)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/ron/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/ron/">Download Location</a></span>
-			</td>
-
-		</tr><tr>
-
-			<td>
-			<span>rus (Russian)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/rus/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/rus/">Download Location</a></span>
-			</td>
-
-		</tr><tr>
-
-			<td>
-			<span>sin (Sinhala)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/sin/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/sin/">Download Location</a></span>
-			</td>
-
-		</tr><tr>
-
-			<td>
-			<span>slv (Slovene)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/slv/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/slv/">Download Location</a></span>
-			</td>
-
-		</tr><tr>
-
-			<td>
-			<span>spa (Spanish)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/spa/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/spa/">Download Location</a></span>
-			</td>
-
-		</tr><tr>
-
-			<td>
-			<span>sqi (Albanian)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/sqi/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/sqi/">Download Location</a></span>
-			</td>
-
-		</tr><tr>
-
-			<td>
-			<span>swa (Swahili)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/swa/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/swa/">Download Location</a></span>
-			</td>
-
-		</tr><tr>
-
-			<td>
-			<span>swe (Swedish)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/swe/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/swe/">Download Location</a></span>
-			</td>
-
-		</tr><tr>
-
-			<td>
-			<span>tam (Tamil)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/tam/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/tam/">Download Location</a></span>
-			</td>
-
-		</tr><tr>
-
-			<td>
-			<span>tel (Telugu)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/tel/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/tel/">Download Location</a></span>
-			</td>
-
-		</tr><tr>
-
-			<td>
-			<span>tgl (Tagalog)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/tgl/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/tgl/">Download Location</a></span>
-			</td>
-
-		</tr><tr>
-
-			<td>
-			<span>tha (Thai)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/tha/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/tha/">Download Location</a></span>
-			</td>
-
-		</tr><tr>
-
-			<td>
-			<span>tur (Turkish)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/tur/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/tur/">Download Location</a></span>
-			</td>
-
-		</tr><tr>
-
-			<td>
-			<span>ukr (Ukrainian)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/ukr/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/ukr/">Download Location</a></span>
-			</td>
-
-		</tr><tr>
-
-			<td>
-			<span>urd (Urdu)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/urd/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/urd/">Download Location</a></span>
-			</td>
-
-		</tr>
-    <tr>
-
-			<td>
-			<span>vie (Vietnamese)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/vie/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/vie/">Download Location</a></span>
-			</td>
-
-		</tr>
-    <tr>
-
-			<td>
-			<span>zho (Chinese)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_cc/zho/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/geoGrams/ngrams_tw/zho/">Download Location</a></span>
-			</td>
-
-		</tr>
-	</tbody>
-	</table>
 	
-	<p>
-	</br></br></br>Supported by <a href="https://www.canterbury.ac.nz/arts/schools-and-departments/linguistics/">the University of Canterbury</a> and <a href="https://www.canterbury.ac.nz/nzilbb/">the New Zealand Institute for Language, Brain and Behaviour</a>
-	</p>
-		
-        </body>
-	
-	<script src="/dist/bluebird.min.js"></script>
-	<script src="/dist/fetch.js"></script>		
-	<script src="/dist/jquery.js"></script>
-   	<script src="/dist/bootstrap.js"></script>
-	<script src="/dist/d3.js"></script>
-	<script src="/dist/topojson.js"></script>
-	<script src="/dist/d3-geomap.js"></script>
-</html>
+<div w3-include-html="/files/footer.html"></div>
+</body>
+
+<script>includeHTML();</script>	
+</html>	
