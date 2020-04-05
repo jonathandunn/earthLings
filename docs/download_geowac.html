@@ -1,121 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
+<head>
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-70470337-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<script src="/dist/ga.js"></script>
 
-  gtag('config', 'UA-70470337-2');
-</script>
-
-    <meta charset="utf-8">
-    <link href="/dist/d3-geomap.min.css" rel="stylesheet">
-    <link href="/dist/font-awesome.css" rel="stylesheet">
-    <link href="/dist/bootstrap.css" rel="stylesheet">
-    <link href="/dist/default.css" rel="stylesheet">
-
-	<style>
-	#corpus {
-	  border-collapse: collapse;
-	  margin-left: auto;
-    	  margin-right: auto;
-	  text-align: right;
-	}
-
-	#corpus td, #corpus th {
-	  border: 1px solid #ddd;
-	  padding: 8px;
-	}
-
-	#corpus tr:nth-child(even){background-color: #f2f2f2;}
-
-	#corpus tr:hover {background-color: #ddd;}
-
-	#corpus th {
-	  padding-top: 12px;
-	  padding-bottom: 12px;
-	  text-align: right;
-	  background-color: #4CAF50;
-	  color: white;
-	}
-		
-	a:link {
-	  background-color: azure;
-	  color: black;
-	}
-
-	a:visited {
-	  background-color: cyan;
-	}
-
-	a:hover {
-	  background-color: aliceblue;
-	}
-
-	a:active {
-	  background-color: hotpink;
-	} 
-</style>  	  
-  </head>
+<meta charset="utf-8">
+<link href="/dist/d3-geomap.min.css" rel="stylesheet">
+<link href="/dist/font-awesome.css" rel="stylesheet">
+<link href="/dist/bootstrap.css" rel="stylesheet">
+<link href="/dist/default.css" rel="stylesheet">  	  
+</head>
 
 <body>
-<table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
+<table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
 <tbody>
 <tr>
-	<td style="vertical-align: middle; white-space: nowrap; padding-left: 35px;">
-	<div style="text-align: center;"> </div>
+	
+<td style="vertical-align: middle; white-space: nowrap; padding-left: 35px;">
+	<div style="text-align: center;">
 	<h3 style="text-align: center;"><a href="http://www.earthlings.io">
-	<img style="border: 0px solid ; width: 263px; height: 72px;" alt="earthLings.io" src="earthlings.png"></a></h3>
-	</td>
+	<img style="border: 0px solid" alt="earthLings.io" src="earthlings.png"></a></h3></div>
+</td>
 
-	<td style="vertical-align: middle; text-align: center; width: 100%;">
-	<a href="index.html">Demographics</a> | 
-	<a href="languages_major.html">Major Languages</a> | 
-	<a href="diversity.html">Linguistic Diversity</a> | 
-	<a href="dialects.html">Dialects</a> | 
-	<a href="geowac_map.html">GeoWAC</a> | 
-	<a href="intro.html">Data Sources</a>
-	</td>
+<td style="vertical-align: middle; text-align: center; width: 100%;">
+<div class="dropdown">
+<button class="dropbtn">Language Maps</button>
+<div class="dropdown-content">
+<a href="index.html">Corpora and Demographics</a>
+<a href="languages_major.html">Major Languages</a>
+<a href="languages_minor.html">Minor Languages</a>
+<a href="geowac_map.html">Population-balanced Corpora</a>
+</div>
+</div>
+
+<div class="dropdown">
+<button class="dropbtn">Language Diversity</button>
+<div class="dropdown-content">
+<a href="diversity.html">Diversity by Country</a>
+<a href="diversity_urban.html">Diversity for Major Cities</a>
+<a href="diversity_time.html">Diversity over Time</a>
+</div>
+</div>
+
+<div class="dropdown">
+<button class="dropbtn">Language Variation</button>
+<div class="dropdown-content">
+<a href="dialects.html">Dialect Classification</a>
+<a href="similarity_geo.html">Similarity between Countries</a>
+<a href="similarity_register.html">Similarity between Registers</a>
+</div>
+</div>
+
+<div class="dropdown">
+<button class="dropbtn">Documentation</button>
+<div class="dropdown-content">
+<a href="intro.pdf">Short Introduction</a>
+<a href="documentation.html">Academic Papers</a>
+<a href="https://www.github.com/jonathandunn/common_crawl_corpus/">Code: Data Collection</a>
+<a href="https://www.github.com/jonathandunn/idNet/">Code: Language ID</a>
+<a href="https://www.github.com/jonathandunn/earthLings/">Code: Mapping Site</a>
+</div>
+</div>
+
+<div class="dropdown">
+<button class="dropbtn">Downloads</button>
+<div class="dropdown-content">
+<a href="intro.html">Data Sources</a>
+<a href="download_cglu.html">Corpus of Global Language Use v.4.2</a>
+<a href="download_geowac.html">GeoWAC v.1.0</a>
+<a href="download_ngrams.html">Geograms (ngrams)</a>
+</div>
+</div>
+</td>
 		
-	<td style="vertical-align: middle; text-align: center; white-space: nowrap; padding-right: 35px;">
-	<a href="https://github.com/jonathandunn/earthLings">
-	<img style="border: 0px solid ;  width: 47px; height: 12px;" alt="GitHub.com" src="GitHub-Logo.png"></a>
-	<br><a href="documentation.html">Documentation</a>
-	</td>
+<td style="vertical-align: middle; text-align: center; white-space: nowrap; padding-right: 35px;">
+	<a href="https://www.jdunn.name">Jonathan Dunn</a><br>
+	<a href="https://www.canterbury.ac.nz/engineering/contact-us/people/ben-adams.html">Ben Adams</a><br>
+</td>
 		
 	<td style="vertical-align: middle;">
 	</td>
 </tr>
 
 <tr>
-	<td style="vertical-align: middle; white-space: nowrap; padding-left: 35px;">
-	<div style="text-align: left;">
-	<i><b>Data-Driven Language and Dialect Mapping</b></i>
+	<td style="vertical-align: top; white-space: nowrap; padding-left: 35px;">
+	<div style="text-align: center;">
+	<p style="text-align: center;"><b>Data-Driven Language Mapping</b></p>
 	</div>
-		<p style="text-align: center;"><a href="corpus_download.html">Download Corpora</a> | <a href="ngram_download.html">Download N-Grams</a></p>
 	</td>
 	
 	<td style="vertical-align: middle;">
 	<p style="text-align: center;">
 	</p>
-	</td>
+		</td>
 
 	<td style="vertical-align: middle; text-align: center; padding-right: 35px; white-space: nowrap;">
-	<a href="https://researchprofile.canterbury.ac.nz/Researcher.aspx?Researcherid=5222011">Jonathan Dunn</a><br>
-	<a href="https://www.canterbury.ac.nz/engineering/contact-us/people/ben-adams.html">Ben Adams</a><br>
-	<a href="https://www.canterbury.ac.nz/">University of Canterbury</a>
+	<a href="https://www.canterbury.ac.nz/arts/schools-and-departments/linguistics/"><img style="border: 0px solid" alt="University of Canterbury Linguistics" src="ling.png"></a>
 	</td>
 	
-	<td style="vertical-align: middle;"><br>
+	<td style="vertical-align: middle;">
 	</td>
 </tr>
 </tbody>
 </table>
-
-<hr>
+	
 <p style = "font-weight: bold;" align="center">
 <br>GeoWAC: Population-balanced Gigaword Corpora<br>
 </p>
