@@ -1,121 +1,41 @@
 * {font-family: "Lucida Grande"; font-size: medium;}
-.hljs{display:block;overflow-x:auto;padding:0.5em;background:#F0F0F0}.hljs,.hljs-subst{color:#444}.hljs-comment{color:#888888}.hljs-keyword,.hljs-attribute,.hljs-selector-tag,.hljs-meta-keyword,.hljs-doctag,.hljs-name{font-weight:bold}.hljs-type,.hljs-string,.hljs-number,.hljs-selector-id,.hljs-selector-class,.hljs-quote,.hljs-template-tag,.hljs-deletion{color:#880000}.hljs-title,.hljs-section{color:#880000;font-weight:bold}.hljs-regexp,.hljs-symbol,.hljs-variable,.hljs-template-variable,.hljs-link,.hljs-selector-attr,.hljs-selector-pseudo{color:#BC6060}.hljs-literal{color:#78A960}.hljs-built_in,.hljs-bullet,.hljs-code,.hljs-addition{color:#397300}.hljs-meta{color:#1f7199}.hljs-meta-string{color:#4d99bf}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:bold}
+
+.hljs{display:block;overflow-x:auto;padding:0.5em;background:#F0F0F0}
+.hljs,.hljs-subst{color:#444}.hljs-comment{color:#888888}
+.hljs-keyword,.hljs-attribute,.hljs-selector-tag,.hljs-meta-keyword,.hljs-doctag,.hljs-name{font-weight:bold}
+.hljs-type,.hljs-string,.hljs-number,.hljs-selector-id,.hljs-selector-class,.hljs-quote,.hljs-template-tag,.hljs-deletion{color:#880000}
+.hljs-title,.hljs-section{color:#880000;font-weight:bold}
+.hljs-regexp,.hljs-symbol,.hljs-variable,.hljs-template-variable,.hljs-link,.hljs-selector-attr,.hljs-selector-pseudo{color:#BC6060}
+.hljs-literal{color:#78A960}
+.hljs-built_in,.hljs-bullet,.hljs-code,.hljs-addition{color:#397300}
+.hljs-meta{color:#1f7199}.hljs-meta-string{color:#4d99bf}
+.hljs-emphasis{font-style:italic}
+.hljs-strong{font-weight:bold}
+
 .axis path,
-	.axis line {
-	  fill: none;
-	  stroke: #000;
-	  shape-rendering: crispEdges;
-	}
-
-	.bar {
-	  fill: orange;
-	}
-
-	.bar:hover {
-	  fill: orangered ;
-	}
-
-	.x.axis path {
-	  display: none;
-	}
-
-	.d3-tip {
-	  line-height: 1;
-	  font-weight: bold;
-	  padding: 12px;
-	  background: rgba(0, 0, 0, 0.8);
-	  color: #fff;
-	  border-radius: 2px;
-	}
-
-	/* Creates a small triangle extender for the tooltip */
-	.d3-tip:after {
-	  box-sizing: border-box;
-	  display: inline;
-	  font-size: 10px;
-	  width: 100%;
-	  line-height: 1;
-	  color: rgba(0, 0, 0, 0.8);
-	  content: "\25BC";
-	  position: absolute;
-	  text-align: center;
-	}
-
-	/* Style northward tooltips differently */
-	.d3-tip.n:after {
-	  margin: -1px 0 0 0;
-	  top: 100%;
-	  left: 0;
-	}
+	.axis line {fill: none; stroke: #000; shape-rendering: crispEdges; }
+	.bar {fill: orange;}
+	.bar:hover {fill: orangered ;}
+	.x.axis path {display: none;}
+	.d3-tip {line-height: 1; font-weight: bold; padding: 12px; background: rgba(0, 0, 0, 0.8); color: #fff; border-radius: 2px; }
+	.d3-tip:after {box-sizing: border-box; display: inline; font-size: 10px; width: 100%; line-height: 1; color: rgba(0, 0, 0, 0.8); content: "\25BC"; position: absolute; text-align: center;}
+	.d3-tip.n:after {margin: -1px 0 0 0; top: 100%; left: 0;}
 	
-	#corpus {
-	  border-collapse: collapse;
-	  margin-left: auto;
-    	  margin-right: auto;
-	  text-align: right;
-	}
-
-	#corpus td, #corpus th {
-	  border: 1px solid #ddd;
-	  padding: 8px;
-	}
-
-	#corpus tr:nth-child(even){background-color: #f2f2f2;}
-
-	#corpus tr:hover {background-color: #ddd;}
-
-	#corpus th {
-	  padding-top: 12px;
-	  padding-bottom: 12px;
-	  text-align: right;
-	  background-color: #4CAF50;
-	  color: white;
-	}
+#corpus {border-collapse: collapse; margin-left: auto; margin-right: auto; text-align: right;}
+#corpus td, #corpus th {border: 1px solid #ddd; padding: 8px;}
+#corpus tr:nth-child(even){background-color: #f2f2f2;}
+#corpus tr:hover {background-color: #ddd;}
+#corpus th {padding-top: 12px; padding-bottom: 12px; text-align: right; background-color: #4CAF50; color: white; }
 		
-	a:link {
-	  background-color: azure;
-	  color: black;
-	}
-
-	a:visited {
-	  background-color: cyan;
-	}
-
-	a:hover {
-	  background-color: aliceblue;
-	}
-
-	a:active {
-	  background-color: hotpink;
-	} 
-.dropbtn {
-    background-color: black;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: lightgrey;
-    min-width: 200px;
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
+a:link {background-color: azure; color: black;}
+a:visited {background-color: cyan;}
+a:hover {background-color: aliceblue;}
+a:active {background-color: hotpink;}
+ 
+.dropbtn {background-color: black; color: white; padding: 16px; font-size: 16px; border: none; }
+.dropdown {position: relative; display: inline-block; }
+.dropdown-content {display: none; position: absolute; background-color: lightgrey; min-width: 200px; z-index: 1;}
+.dropdown-content a {color: black; padding: 12px 16px; text-decoration: none; display: block;}
 .dropdown-content a:hover {background-color: white;}
 .dropdown:hover .dropdown-content {display: block;}
 .dropdown:hover .dropbtn {background-color: grey;}
