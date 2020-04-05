@@ -1,906 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-70470337-2"></script>
-<script src="/dist/ga.js"></script>
-
 <meta charset="utf-8">
-<link href="/dist/d3-geomap.min.css" rel="stylesheet">
-<link href="/dist/font-awesome.css" rel="stylesheet">
-<link href="/dist/bootstrap.css" rel="stylesheet">
-<link href="/dist/default.css" rel="stylesheet">  	  
+
+<head>
+	<script src="/dist/includes.js"></script>
+	<div w3-include-html="/files/head.html"></div>
 </head>
 
 <body>
-<table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
+<div w3-include-html="/files/header.html"></div>
+<hr>	
+
+<p style = "font-weight: bold;" align="center">
+GeoWAC: Population-balanced Gigaword Corpora by Language
+</p>
+<p align="center"><small>
+<a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC_Countries/">Or click here to download country-specific corpora.</a>
+</small></p>
+
+<table id = "corpus">
 <tbody>
 <tr>
-	
-<td style="vertical-align: middle; white-space: nowrap; padding-left: 35px;">
-	<div style="text-align: center;">
-	<h3 style="text-align: center;"><a href="http://www.earthlings.io">
-	<img style="border: 0px solid" alt="earthLings.io" src="earthlings.png"></a></h3></div>
-</td>
-
-<td style="vertical-align: middle; text-align: center; width: 100%;">
-<div class="dropdown">
-<button class="dropbtn">Language Maps</button>
-<div class="dropdown-content">
-<a href="index.html">Corpora and Demographics</a>
-<a href="languages_major.html">Major Languages</a>
-<a href="languages_minor.html">Minor Languages</a>
-<a href="geowac_map.html">Population-balanced Corpora</a>
-</div>
-</div>
-
-<div class="dropdown">
-<button class="dropbtn">Language Diversity</button>
-<div class="dropdown-content">
-<a href="diversity.html">Diversity by Country</a>
-<a href="diversity_urban.html">Diversity for Major Cities</a>
-<a href="diversity_time.html">Diversity over Time</a>
-</div>
-</div>
-
-<div class="dropdown">
-<button class="dropbtn">Language Variation</button>
-<div class="dropdown-content">
-<a href="dialects.html">Dialect Classification</a>
-<a href="similarity_geo.html">Similarity between Countries</a>
-<a href="similarity_register.html">Similarity between Registers</a>
-</div>
-</div>
-
-<div class="dropdown">
-<button class="dropbtn">Documentation</button>
-<div class="dropdown-content">
-<a href="intro.pdf">Short Introduction</a>
-<a href="documentation.html">Academic Papers</a>
-<a href="https://www.github.com/jonathandunn/common_crawl_corpus/">Code: Data Collection</a>
-<a href="https://www.github.com/jonathandunn/idNet/">Code: Language ID</a>
-<a href="https://www.github.com/jonathandunn/earthLings/">Code: Mapping Site</a>
-</div>
-</div>
-
-<div class="dropdown">
-<button class="dropbtn">Downloads</button>
-<div class="dropdown-content">
-<a href="intro.html">Data Sources</a>
-<a href="download_cglu.html">Corpus of Global Language Use v.4.2</a>
-<a href="download_geowac.html">GeoWAC v.1.0</a>
-<a href="download_ngrams.html">Geograms (ngrams)</a>
-</div>
-</div>
-</td>
-		
-<td style="vertical-align: middle; text-align: center; white-space: nowrap; padding-right: 35px;">
-	<a href="https://www.jdunn.name">Jonathan Dunn</a><br>
-	<a href="https://www.canterbury.ac.nz/engineering/contact-us/people/ben-adams.html">Ben Adams</a><br>
-</td>
-		
-	<td style="vertical-align: middle;">
-	</td>
+	<td><br></td>
+	<td><span style = "font-weight: bold;">Link to Data</span></td>
+	<td><span style = "font-weight: bold;">Size in Words</span></td>
 </tr>
-
 <tr>
-	<td style="vertical-align: top; white-space: nowrap; padding-left: 35px;">
-	<div style="text-align: center;">
-	<p style="text-align: center;"><b>Data-Driven Language Mapping</b></p>
-	</div>
-	</td>
-	
-	<td style="vertical-align: middle;">
-	<p style="text-align: center;">
-	</p>
-		</td>
-
-	<td style="vertical-align: middle; text-align: center; padding-right: 35px; white-space: nowrap;">
-	<a href="https://www.canterbury.ac.nz/arts/schools-and-departments/linguistics/"><img style="border: 0px solid" alt="University of Canterbury Linguistics" src="ling.png"></a>
-	</td>
-	
-	<td style="vertical-align: middle;">
-	</td>
+	<td><span>(ara) Arabic</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/ara/">Download Location</a></span></td>
+	<td><span>606,436,833</span>	</td>
+</tr>
+<tr>
+	<td><span>(aze) Azerbaijani</span></td>
+	<td> <span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/aze/">Download Location</a></span></td>
+	<td><span>204,182,099</span></td>
+</tr>
+<tr>
+	<td><span>(bel) Belarusian</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/bel/">Download Location</a></span></td>
+	<td><span>71,138,153</span></td>
+</tr>
+<tr>
+	<td><span>(bul) Bulgarian</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/bul/">Download Location</a></span></td>
+	<td><span>1,100,000,098</span></td>
+</tr>
+<tr>
+	<td><span>(cat) Catalan</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/cat/">Download Location</a></span></td>
+	<td><span>103,364,780</span></td>
+</tr>
+<tr>
+	<td><span>(ces) Czech</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/ces/">Download Location</a></span></td>
+	<td><span>1,100,000,137</span></td>
+</tr>
+<tr>
+	<td><span>(dan) Danish</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/dan/">Download Location</a></span></td>
+	<td><span>1,100,000,378</span></td>
+</tr>
+<tr>
+	<td><span>(deu) German</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/deu/">Download Location</a></span></td>
+	<td><span>1,100,000,981</span></td>
+</tr>
+<tr>
+	<td><span>(ell) Greek</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/ell/">Download Location</a></span></td>
+	<td><span>1,100,000,667</span></td>
+</tr>
+<tr>
+	<td><span>(eng) English (Inner Circle)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/eng/">Download Location</a></span></td>
+	<td><span>2,100,000,587</span></td>
+</tr>
+<tr>
+	<td><span>(eng) English (Outer Circle)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/eng/">Download Location</a></span></td>
+	<td><span>2,100,000,533</span></td>
+</tr>
+<tr>
+	<td><span>(eng) English (Expanding Circle)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/eng/">Download Location</a></span></td>
+	<td><span>2,100,000,515</span></td>
+</tr>
+<tr>
+	<td><span>(est) Estonian</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/est/">Download Location</a></span></td>
+	<td><span>492,028,896</span></td>
+</tr>
+<tr>
+	<td><span>(fas) Farsi</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/fas/">Download Location</a></span></td>
+	<td><span>1,100,000,846</span></td>
+</tr>
+<tr>
+	<td><span>(fin) Finnish</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/fin/">Download Location</a></span></td>
+	<td><span>1,100,000,463</span></td>
+</tr>
+<tr>
+	<td><span>(fra) French</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/fra/">Download Location</a></span></td>
+	<td><span>2,100,000,209</span></td>
+</tr>
+<tr>
+	<td><span>(gle) Irish</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/gle/">Download Location</a></span></td>
+	<td><span>21,379,703</span></td>
+</tr>
+<tr>
+	<td><span>(hbs) Serbo-Croatian (Cover)</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/hbs/">Download Location</a></span></td>
+	<td><span>1,100,000,899</span></td>
+</tr>
+<tr>
+	<td><span>(hin) Hindi</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/hin/">Download Location</a></span></td>
+	<td><span>230,899,644</span></td>
+</tr>
+<tr>
+	<td><span>(hun) Hungarian</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/hun/">Download Location</a></span></td>
+	<td><span>1,100,000,263</span></td>
+</tr>
+<tr>
+	<td><span>(ind) Indonesian</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/ind/">Download Location</a></span></td>
+	<td><span>437,494,108</span></td>
+</tr>
+<tr>
+	<td><span>(isl) Icelandic</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/isl/">Download Location</a></span></td>
+	<td><span>179,855,817</span></td>
+</tr>
+<tr>
+	<td><span>(ita) Italian</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/ita/">Download Location</a></span></td>
+	<td><span>1,100,000,922</span></td>
+</tr>
+<tr>
+	<td><span>(jpn) Japanese</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/jpn/">Download Location</a></span></td>
+	<td><span>1,100,000,422</span></td>
+</tr>
+<tr>
+	<td><span>(kat) Georgian</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/kat/">Download Location</a></span></td>
+	<td><span>136,947,018</span></td>
+</tr>
+<tr>
+	<td><span>(kaz) Kazakh</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/kaz/">Download Location</a></span></td>
+	<td><span>94,954,270</span></td>
+</tr>
+<tr>
+	<td><span>(kor) Korean</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/kor/">Download Location</a></span></td>
+	<td><span>291,998,107</span></td>
+</tr>
+<tr>
+	<td><span>(lav) Latvian</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/lav/">Download Location</a></span></td>
+	<td><span>282,206,379</span></td>
+</tr>
+<tr>
+	<td><span>(lit) Lithuanian</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/lit/">Download Location</a></span></td>
+	<td><span>1,100,000,820</span></td>
+</tr>
+<tr>
+	<td><span>(mkd) Macedonian</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/mkd/">Download Location</a></span></td>
+	<td><span>119,179,940</span></td>
+</tr>
+<tr>
+	<td><span>(mon) Mongolian</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/mon/">Download Location</a></span></td>
+	<td><span>120,779,559</span></td>
+</tr>
+<tr>
+	<td><span>(nld) Dutch</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/nld/">Download Location</a></span></td>
+	<td><span>1,100,000,946</span></td>
+</tr>
+<tr>
+	<td><span>(nor) Norwegian</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/nor/">Download Location</a></span></td>
+	<td><span>1,100,000,000</span></td>
+</tr>
+<tr>
+	<td><span>(pol) Polish</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/pol/">Download Location</a></span></td>
+	<td><span>1,100,000,937</span></td>
+</tr>
+<tr>
+	<td><span>(por) Portuguese</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/por/">Download Location</a></span></td>
+	<td><span>2,097,432,740</span></td>
+</tr>
+<tr>
+	<td><span>(ron) Romanian</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/ron/">Download Location</a></span></td>
+	<td><span>1,100,000,969</span></td>
+</tr>
+<tr>
+	<td><span>(rus) Russian</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/rus/">Download Location</a></span></td>
+	<td><span>2,100,000,182</span></td>
+</tr>
+<tr>
+	<td><span>(slk) Slovak</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/slk/">Download Location</a></span></td>
+	<td><span>1,100,000,005</span></td>
+</tr>
+<tr>
+	<td><span>(slv) Slovenian</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/slv/">Download Location</a></span></td>
+	<td><span>490,154,703</span></td>
+</tr>
+<tr>
+	<td><span>(spa) Spanish</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/spa/">Download Location</a></span></td>
+	<td><span>2,100,000,227</span></td>
+</tr>
+<tr>
+	<td><span>(sqi) Albanian</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/sqi/">Download Location</a></span></td>
+	<td><span>26,048,420</span></td>
+</tr>
+<tr>
+	<td><span>(swe) Swedish</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/swe/">Download Location</a></span></td>
+	<td><span>1,100,000,853</span></td>
+</tr>
+<tr>
+	<td><span>(tam) Tamil</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/tam/">Download Location</a></span></td>
+	<td><span>85,828,037</span></td>
+</tr>
+<tr>
+	<td><span>(tgl) Tagalog</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/tgl/">Download Location</a></span></td>
+	<td><span>27,887,410</span></td>
+</tr>
+<tr>
+	<td><span>(tur) Turkish</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/tur/">Download Location</a></span></td>
+	<td><span>141,977,388</span></td>
+</tr>
+<tr>
+	<td><span>(ukr) Ukrainian</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/ukr/">Download Location</a></span></td>
+	<td><span>515,907,405</span></td>
+</tr>
+<tr>
+	<td><span>(urd) Urdu</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/urd/">Download Location</a></span></td>
+	<td><span>45,012,456</span></td>
+</tr>
+<tr>
+	<td><span>(uzb) Uzbek</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/uzb/">Download Location</a></span></td>
+	<td><span>39,007,861</span></td>
+</tr>
+<tr>
+	<td><span>(vie) Vietnamese</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/vie/">Download Location</a></span></td>
+	<td><span>1,100,000,214</span></td>
+</tr>
+<tr>
+	<td><span>(zho) Chinese</span></td>
+	<td><span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/zho/">Download Location</a></span></td>
+	<td><span>2,100,000,702</span></td>
+</tr>
+<tr>
+	<td><span style = "font-weight: bold;">TOTAL</span></td>
+	<td><span style = "font-weight: bold;"></span></td>
+	<td><span style = "font-weight: bold;">42.46 billion words</span></td>
 </tr>
 </tbody>
 </table>
-<hr>	
-<p style = "font-weight: bold;" align="center">
-<br>GeoWAC: Population-balanced Gigaword Corpora by Language<br>
-</p>
-<p align="center"><small>
-<a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC_Countries/">Or click here to download country-specific corpora.</a></small></p>
-
-       <table id = "corpus">
-	<tbody>
-
-		<tr>
-
-			<td><br></td>
-
-			<td> 
-			<span style = "font-weight: bold;">
-			Link to Data</span> 
-			</td>
-
-			<td> 
-			<span style = "font-weight: bold;">
-			Size in Words</span> 
-			</td>
-
-		</tr>
-		<tr>
-
-			<td> 
-			<span>(ara) Arabic</span> 
-			</td>
-
-			<td> 
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/ara/">Download Location</a></span> 
-			</td>
-
-			<td>
-			<span>606,436,833</span>
-			</td>
-
-		</tr>
-		<tr>
-
-			<td> 
-			<span>(aze) Azerbaijani</span> 
-			</td>
-
-			<td> <span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/aze/">Download Location</a></span> 
-			</td>
-
-			<td> 
-			<span>204,182,099</span> 
-			</td>
-
-		</tr>
-		<tr>
-
-			<td> 
-			<span>(bel) Belarusian</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/bel/">Download Location</a></span>
-			</td>
-
-			<td>
-			<span>71,138,153</span> 
-			</td>
-
-		</tr>
-		<tr>
-
-			<td> 
-			<span>(bul) Bulgarian</span> 
-			</td>
-
-			<td> 
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/bul/">Download Location</a></span> 
-			</td>
-
-			<td> 
-			<span>1,100,000,098</span>
-			</td>
-
-			</tr>
-			<tr>
-
-			<td>
-			<span>(cat) Catalan</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/cat/">Download Location</a></span> 
-			</td>
-
-			<td>
-			<span>103,364,780</span> 
-			</td>
-
-		</tr>
-		<tr>
-
-			<td>
-			<span>(ces) Czech</span>
-			</td>
-
-			<td> 
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/ces/">Download Location</a></span>
-			</td>
-
-			<td>
-			<span>1,100,000,137</span>
-			</td>
-
-		</tr>
-		<tr>
-
-			<td>
-			<span>(dan) Danish</span> 
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/dan/">Download Location</a></span>
-			</td>
-
-			<td>
-			<span>1,100,000,378</span>
-			</td>
-
-		</tr>
-		<tr>
-
-			<td>
-			<span>(deu) German</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/deu/">Download Location</a></span>
-			</td>
-
-			<td>
-			<span>1,100,000,981</span>
-			</td>
-
-		</tr>
-		<tr>
-
-			<td>
-			<span>(ell) Greek</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/ell/">Download Location</a></span>
-			</td>
-
-			<td>
-			<span>1,100,000,667</span>
-			</td>
-
-		</tr>
-		<tr>
-
-			<td>
-			<span>(eng) English (Inner Circle)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/eng/">Download Location</a></span>
-			</td>
-
-			<td>
-			<span>2,100,000,587</span>
-			</td>
-
-		</tr>
-		<tr>
-
-			<td>
-			<span>(eng) English (Outer Circle)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/eng/">Download Location</a></span>
-			</td>
-
-			<td>
-			<span>2,100,000,533</span>
-			</td>
-
-		</tr>
-		<tr>
-
-			<td>
-			<span>(eng) English (Expanding Circle)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/eng/">Download Location</a></span>
-			</td>
-
-			<td>
-			<span>2,100,000,515</span>
-			</td>
-
-		</tr>
-		<tr>
-
-			<td> 
-			<span>(est) Estonian</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/est/">Download Location</a></span>
-			</td>
-
-			<td>
-			<span>492,028,896</span>
-			</td>
-
-		</tr>
-		<tr>
-
-			<td>
-			<span>(fas) Farsi</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/fas/">Download Location</a></span>
-			</td>
-
-			<td>
-			<span>1,100,000,846</span>
-			</td>
-
-		</tr>
-		<tr>
-
-			<td>
-			<span>(fin) Finnish</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/fin/">Download Location</a></span>
-			</td>
-
-			<td>
-			<span>1,100,000,463</span>
-			</td>
-
-		</tr>
-		<tr>
-
-			<td>
-			<span>(fra) French</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/fra/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span>2,100,000,209</span>
-			</td>
-
-		</tr>
-		<tr>
-
-			<td>
-			<span>(gle) Irish</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/gle/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span>21,379,703</span>
-			</td>
-
-		</tr>
-		<tr>
-
-			<td>
-			<span>(hbs) Serbo-Croatian (Cover)</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/hbs/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span>1,100,000,899</span>
-			</td>
-
-		</tr>
-		<tr>
-
-			<td>
-			<span>(hin) Hindi</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/hin/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span>230,899,644</span>
-			</td>
-
-		</tr>
-		<tr>
-
-			<td>
-			<span>(hun) Hungarian</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/hun/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span>1,100,000,263</span>
-			</td>
-
-		</tr>
-		<tr>
-
-			<td>
-			<span>(ind) Indonesian</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/ind/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span>437,494,108</span>
-			</td>
-
-		</tr>
-		<tr>
-
-			<td>
-			<span>(isl) Icelandic</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/isl/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span>179,855,817</span>
-			</td>
-
-		</tr>
-		<tr>
-
-			<td>
-			<span>(ita) Italian</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/ita/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span>1,100,000,922</span>
-			</td>
-
-		</tr>
-		<tr>
-
-			<td>
-			<span>(jpn) Japanese</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/jpn/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span>1,100,000,422</span>
-			</td>
-
-		</tr>
-		<tr>
-
-			<td>
-			<span>(kat) Georgian</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/kat/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span>136,947,018</span>
-			</td>
-
-		</tr>
-
-			<td>
-			<span>(kaz) Kazakh</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/kaz/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span>94,954,270</span>
-			</td>
-
-		</tr>
-		<tr>
-			
-			<td>
-			<span>(kor) Korean</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/kor/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span>291,998,107</span>
-			</td>
-
-		</tr>
-		<tr>
-
-			<td>
-			<span>(lav) Latvian</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/lav/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span>282,206,379</span>
-			</td>
-
-		</tr>
-		<tr>
-
-			<td>
-			<span>(lit) Lithuanian</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/lit/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span>1,100,000,820</span>
-			</td>
-
-		</tr>
-		<tr>
-			
-			<td>
-			<span>(mkd) Macedonian</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/mkd/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span>119,179,940</span>
-			</td>
-
-		</tr>
-		<tr>
-
-			<td>
-			<span>(mon) Mongolian</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/mon/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span>120,779,559</span>
-			</td>
-
-		</tr>
-		<tr>
-			
-			<td>
-			<span>(nld) Dutch</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/nld/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span>1,100,000,946</span>
-			</td>
-
-		</tr>
-		<tr>
-			
-			<td>
-			<span>(nor) Norwegian</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/nor/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span>1,100,000,000</span>
-			</td>
-
-		</tr>
-		<tr>
-			
-			<td>
-			<span>(pol) Polish</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/pol/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span>1,100,000,937</span>
-			</td>
-
-		</tr>
-		<tr>
-			
-			<td>
-			<span>(por) Portuguese</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/por/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span>2,097,432,740</span>
-			</td>
-
-		</tr>
-		<tr>
-
-			<td>
-			<span>(ron) Romanian</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/ron/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span>1,100,000,969</span>
-			</td>
-
-		</tr>
-		<tr>
-			
-			<td>
-			<span>(rus) Russian</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/rus/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span>2,100,000,182</span>
-			</td>
-
-		</tr>
-		<tr>
-			
-			<td>
-			<span>(slk) Slovak</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/slk/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span>1,100,000,005</span>
-			</td>
-
-		</tr>
-		<tr>
-			
-			<td>
-			<span>(slv) Slovenian</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/slv/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span>490,154,703</span>
-			</td>
-
-		</tr>
-		<tr>
-			
-			<td>
-			<span>(spa) Spanish</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/spa/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span>2,100,000,227</span>
-			</td>
-
-		</tr>
-		<tr>
-			
-			<td>
-			<span>(sqi) Albanian</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/sqi/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span>26,048,420</span>
-			</td>
-
-		</tr>
-		<tr>
-			
-			<td>
-			<span>(swe) Swedish</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/swe/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span>1,100,000,853</span>
-			</td>
-
-		</tr>
-		<tr>
-			
-			<td>
-			<span>(tam) Tamil</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/tam/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span>85,828,037</span>
-			</td>
-
-		</tr>
-		<tr>
-			
-			<td>
-			<span>(tgl) Tagalog</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/tgl/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span>27,887,410</span>
-			</td>
-
-		</tr>
-		<tr>
-
-			<td>
-			<span>(tur) Turkish</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/tur/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span>141,977,388</span>
-			</td>
-
-		</tr>
-		<tr>
-			
-			<td>
-			<span>(ukr) Ukrainian</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/ukr/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span>515,907,405</span>
-			</td>
-
-		</tr>
-		<tr>
-			
-			<td>
-			<span>(urd) Urdu</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/urd/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span>45,012,456</span>
-			</td>
-
-		</tr>
-		<tr>
-			
-			<td>
-			<span>(uzb) Uzbek</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/uzb/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span>39,007,861</span>
-			</td>
-
-		</tr>
-		<tr>
-			
-			<td>
-			<span>(vie) Vietnamese</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/vie/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span>1,100,000,214</span>
-			</td>
-
-		</tr>
-		<tr>
-			
-			<td>
-			<span>(zho) Chinese</span>
-			</td>
-
-			<td>
-			<span><a href="https://publicdata.canterbury.ac.nz/Research/Geocorpus/GeoWAC/zho/">Download Location</a></span>
-			</td>
-
-			<td> 
-			<span>2,100,000,702</span>
-			</td>
-
-		</tr>
-		
-		<tr>
-
-		<td><span style = "font-weight: bold;">TOTAL</span></td>
-
-		<td><span style = "font-weight: bold;"></span></td>
-
-		<td><span style = "font-weight: bold;">42.46 billion words</span></td>
-
-		</tr>
-	</tbody>
-	</table>
 	
-	<p>
-	</br></br></br>Supported by <a href="https://www.canterbury.ac.nz/arts/schools-and-departments/linguistics/">the University of Canterbury</a> and <a href="https://www.canterbury.ac.nz/nzilbb/">the New Zealand Institute for Language, Brain and Behaviour</a>
-	</p>
-		
-        </body>
-	
-	<script src="/dist/bluebird.min.js"></script>
-	<script src="/dist/fetch.js"></script>		
-	<script src="/dist/jquery.js"></script>
-   	<script src="/dist/bootstrap.js"></script>
-	<script src="/dist/d3.js"></script>
-	<script src="/dist/topojson.js"></script>
-	<script src="/dist/d3-geomap.js"></script>
+<div w3-include-html="/files/footer.html"></div>
+</body>
+
+<script>includeHTML();</script>	
 </html>
