@@ -23,9 +23,6 @@ var format_small = function(d) {
 
 var format_mil = function(Number) {
     
-  // Nine Zeroes for Billions
-    return Math.abs(Number(labelValue)) >= 1.0e+9
-
     ? Math.abs(Number(labelValue)) / 1.0e+9 + "B"
     // Six Zeroes for Millions 
     : Math.abs(Number(labelValue)) >= 1.0e+6
