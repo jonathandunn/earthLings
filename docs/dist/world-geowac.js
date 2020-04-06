@@ -9,9 +9,18 @@ d3.select('#select-language').on('change', function(a) {
   map.column(currentLanguage).update()
 });
 
-var format_mil = function(d) {
-    d = d / 1000000;
-    return d3.format(',.02f')(d) + 'M';
+function intlFormat(num) {
+  return new Intl.NumberFormat().format(Math.round(num*10)/10);
+}
+
+var format_mil = function(num) {
+  if(num >= 1000000000)
+    return intlFormat(num/1000000000)+'B';
+  if(num >= 1000000)
+    return intlFormat(num/1000000)+'M';
+  if(num >= 1000)
+    return intlFormat(num/1000)+'k';
+  return intlFormat(num); 
 }
 
 var map = d3.choropleth()
