@@ -24,12 +24,12 @@ var format_small = function(d) {
 var format_mil = function(d) {
     d = d.format(Math.round(num*10)/10);
     if(d >= 1000000000)
-      return intlFormat(d/1000000000)+'B';
+      return (d/1000000000)+'B';
     if(d >= 1000000)
-      return intlFormat(d/1000000)+'M';
+      return (d/1000000)+'M';
     if(d >= 1000)
-      return intlFormat(d/1000)+'k';
-    return intlFormat(d);
+      return (d/1000)+'k';
+    return (d);
  
 }
 
