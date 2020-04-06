@@ -1,6 +1,7 @@
 .d3-geomap text {
   fill: #333;
-  font-size: 14px; }
+  font-family: "Lucida Grande";
+  font-size: 12px; }
 
 .d3-geomap .background {
   fill: #87CEFA;
