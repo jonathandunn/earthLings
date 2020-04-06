@@ -22,7 +22,8 @@
   stroke-width: 1px; }
 
 .d3-geomap .unit:hover{
-  stroke: white;
-  stroke-width: 4;
-  background-color: black;
+  stroke: #fff;
+  stroke-width: 6;
+  background-color: #fff;
+  fill: #fff;
 }
