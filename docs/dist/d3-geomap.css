@@ -24,4 +24,5 @@
 .d3-geomap .unit:hover{
     stroke-width: 2px;
     stroke: white;
+    background-color: black;
 }
