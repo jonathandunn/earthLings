@@ -10,12 +10,10 @@
 <body>
 <div w3-include-html="/files/header.html"></div>
 
-<table align = "center">
-<tbody>
-<tr>
-<td>
-	<p style="text-align: center;">
-	<select id="select-key" class="three columns">
+<p style="text-align: center;">
+<i>How does language data correspond with population demographics?</i><br>
+
+<select id="select-key" class="three columns">
 	<option value="Per Capita GDP">Demographics: Per Capita GDP</option>
 	<option value="Percent Internet Access">Demographics: Percent of Population with Internet Access</option>
 	<option value="Population">Demographics: Raw Population by Country</option>
@@ -31,11 +29,6 @@
 </select>
 <br><small>Click on a country to zoom in.</small>
 </p>
-	</td>
-	<td style = "padding-left: 35px; vertical-align: top;"><i>How does language data correspond with population demographics?</i></td>
-
-</tbody>
-</table>
 	
 <div id="map" class="d3-geomap" style="border:1px solid black;"></div>
 <div w3-include-html="/files/footer.html"></div>
