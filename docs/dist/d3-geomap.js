@@ -348,7 +348,7 @@ function (_Geomap) {
       var wRect = wBox / (wFactor * .75),
           hLegend = hBox - hBox / (hFactor * 1.8),
           offsetText = wRect / 2,
-          offsetY = self.properties.height - hBox,
+          offsetY = self.properties.height - hBox + 500,
           tr = 'translate(' + offsetText + ',' + offsetText * 3 + ')'; // Remove possibly existing legend, before drawing.
 
       self.svg.select('g.legend').remove(); // Reverse a copy to not alter colors array.
