@@ -21,6 +21,6 @@
   stroke: #333;
   stroke-width: 1px; }
 
-.d3-geomap .path.unit:hover{
+.d3-geomap .unit:hover{
     fill:red;
 }
