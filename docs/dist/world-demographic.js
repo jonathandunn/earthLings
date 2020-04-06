@@ -21,8 +21,7 @@ var format_small = function(d) {
     return numberWithCommas(Math.round(d));
 }
 
-function intlFormat(num)
-{
+function intlFormat(num) {
   return new Intl.NumberFormat().format(Math.round(num*10)/10);
 }
 
