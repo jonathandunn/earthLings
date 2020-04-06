@@ -21,20 +21,16 @@ var format_small = function(d) {
     return numberWithCommas(Math.round(d));
 }
 
-var format_mil = function(Number) {
-    
-    ? Math.abs(Number(labelValue)) / 1.0e+9 + "B"
-    // Six Zeroes for Millions 
-    : Math.abs(Number(labelValue)) >= 1.0e+6
-
-    ? Math.abs(Number(labelValue)) / 1.0e+6 + "M"
-    // Three Zeroes for Thousands
-    : Math.abs(Number(labelValue)) >= 1.0e+3
-
-    ? Math.abs(Number(labelValue)) / 1.0e+3 + "K"
-
-    : Math.abs(Number(labelValue));
-    return d3.format(',.00f')(Number);
+var format_mil = function(d) {
+    d = d.format(Math.round(num*10)/10);
+    if(d >= 1000000000)
+      return intlFormat(d/1000000000)+'B';
+    if(d >= 1000000)
+      return intlFormat(d/1000000)+'M';
+    if(d >= 1000)
+      return intlFormat(d/1000)+'k';
+    return intlFormat(d);
+ 
 }
 
 var format_per = function(d) {
