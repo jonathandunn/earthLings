@@ -198,7 +198,7 @@ function () {
 
       var self = this;
       self.data = selection.datum();
-      if (!self.properties.width) self.properties.width = selection.node().getBoundingClientRect().width - 10;
+      if (!self.properties.width) self.properties.width = selection.node().getBoundingClientRect().width;
       if (!self.properties.height) self.properties.height = self.properties.width / 1.92;
       if (!self.properties.scale) self.properties.scale = self.properties.width / 5.4;
       if (!self.properties.translate) self.properties.translate = [self.properties.width / 2, self.properties.height / 2];
