@@ -44,6 +44,6 @@ var map = d3.choropleth()
     .colors(['#ffffcc','#ffeda0','#fed976','#feb24c','#fd8d3c','#fc4e2a','#e31a1c','#bd0026','#800026'])
     .unitId("iso3");
 
-d3.csv("/data/map.diversity.time.csv").then(data => {
+d3.csv("/data/map.diversity.csv").then(data => {
     map.draw(d3.select("#map").datum(data));
 });
