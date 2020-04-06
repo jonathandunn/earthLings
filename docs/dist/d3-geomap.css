@@ -3,7 +3,7 @@
   font-size: 12px; }
 
 .d3-geomap .background {
-  fill: none;
+  fill: lightskyblue;
   pointer-events: all; }
 
 .d3-geomap .unit {
