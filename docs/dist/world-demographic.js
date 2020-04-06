@@ -26,6 +26,8 @@ function intlFormat(num) {
 }
 
 var format_mil = function(num) {
+  if(num >= 1000000000)
+    return intlFormat(num/1000000000)+'B';
   if(num >= 1000000)
     return intlFormat(num/1000000)+'M';
   if(num >= 1000)
