@@ -19,3 +19,7 @@
 .d3-geomap .legend-bar {
   stroke: #333;
   stroke-width: 1px; }
+
+.d3-geomap path.unit:hover{
+    fill:red;
+}
