@@ -21,16 +21,17 @@ var format_small = function(d) {
     return numberWithCommas(Math.round(d));
 }
 
-var format_mil = function(d) {
-    d = d.format(Math.round(num*10)/10);
-    if(d >= 1000000000)
-      return (d/1000000000)+'B';
-    if(d >= 1000000)
-      return (d/1000000)+'M';
-    if(d >= 1000)
-      return (d/1000)+'k';
-    return (d);
- 
+function intlFormat(num)
+{
+  return new Intl.NumberFormat().format(Math.round(num*10)/10);
+}
+
+var format_mil = function(num) {
+  if(num >= 1000000)
+    return intlFormat(num/1000000)+'M';
+  if(num >= 1000)
+    return intlFormat(num/1000)+'k';
+  return intlFormat(num); 
 }
 
 var format_per = function(d) {
