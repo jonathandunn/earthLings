@@ -347,7 +347,7 @@ function (_Geomap) {
 
       var wRect = wBox / (wFactor * .75),
           hLegend = hBox - hBox / (hFactor * 1.8),
-          offsetText = wRect / 2,
+          offsetText = wRect / 2 + 10,
           offsetY = 1,
           tr = 'translate(' + offsetText + ',' + offsetText * 3 + ')'; // Remove possibly existing legend, before drawing.
 
