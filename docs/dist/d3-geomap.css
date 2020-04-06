@@ -1,6 +1,6 @@
 .d3-geomap text {
   fill: #333;
-  font-size: 12px; }
+  font-size: 14px; }
 
 .d3-geomap .background {
   fill: #87CEFA;
@@ -23,7 +23,7 @@
 
 .d3-geomap .unit:hover{
   stroke: #fff;
-  stroke-width: 6;
+  stroke-width: 4;
   background-color: #fff;
   fill: #fff;
 }
