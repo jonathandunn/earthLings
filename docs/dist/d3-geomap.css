@@ -29,7 +29,7 @@
   stroke-width: 3;
 }
 
-path.unit:hover{
+.d3-geomap path.unit:hover{
   fill: #FFD700;
   background-color: #FFD700;
 }
