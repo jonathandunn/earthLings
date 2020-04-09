@@ -1,5 +1,6 @@
 // We define a variable holding the current key to visualize on the map.
 var currentColumn = "Web Total Words Per Country";
+var currentDomain = [10000000, 10000000000];
 
 // Listen to changes of the dropdown to select the key to visualize on the map.
 d3.select("#select-key").on("change", function(a) {
@@ -35,12 +36,6 @@ var format_mil = function(num) {
   return intlFormat(num); 
 }
 
-var domainValue = function() {
-  if(currentColumn == "Web Total Words Per Country")
-    return [10000000, 15000000000];
-  return []; 
-}
-
 var format_per = function(d) {
     d = d * 100;
     return d3.format(',.01f')(d) + '%';
@@ -56,7 +51,7 @@ var map = d3.choropleth()
     .column(currentColumn)
     .legend(true)
     .format(format_mil)
-    .domain(domainValue)
+    .domain(currentDomain)
     .valueScale(d3.scaleQuantize)
     .colors(['#ffffe5', '#fff7bc', '#fee391', '#fec44f', '#fe9929', '#ec7014', '#cc4c02', '#993404', '#662506'])
     .unitId("iso3");
