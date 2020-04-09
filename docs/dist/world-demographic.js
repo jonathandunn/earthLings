@@ -35,6 +35,12 @@ var format_mil = function(num) {
   return intlFormat(num); 
 }
 
+var domainValue = function() {
+  if(currentColumn == "Web Total Words Per Country")
+    return [10000000, 15000000000];
+  return []; 
+}
+
 var format_per = function(d) {
     d = d * 100;
     return d3.format(',.01f')(d) + '%';
@@ -50,6 +56,7 @@ var map = d3.choropleth()
     .column(currentColumn)
     .legend(true)
     .format(format_mil)
+    .domain(domainValue)
     .valueScale(d3.scaleQuantize)
     .colors(['#ffffe5', '#fff7bc', '#fee391', '#fec44f', '#fe9929', '#ec7014', '#cc4c02', '#993404', '#662506'])
     .unitId("iso3");
