@@ -51,7 +51,7 @@ var map = d3.choropleth()
     .legend(true)
     .format(format_mil)
     .domain([10000000, 10000000000])
-    .valueScale(d3.scaleQuantize)
+    .valueScale(d3.scaleQuantizeNice)
     .colors(['#ffffe5', '#fff7bc', '#fee391', '#fec44f', '#fe9929', '#ec7014', '#cc4c02', '#993404', '#662506'])
     .unitId("iso3");
 
