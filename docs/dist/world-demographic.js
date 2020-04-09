@@ -50,8 +50,9 @@ var map = d3.choropleth()
     .column(currentColumn)
     .legend(true)
     .format(format_mil)
-    .valueScale(d3.scaleQuantile)
-    .colors(['#543005', '#8c510a', '#bf812d', '#dfc27d', '#f6e8c3', '#f5f5f5', '#c7eae5', '#80cdc1', '#35978f', '#01665e', '#003c30'])
+    .domain([10000000, 10000000000])
+    .valueScale(d3.scaleQuantize)
+    .colors(['#ffffe5', '#fff7bc', '#fee391', '#fec44f', '#fe9929', '#ec7014', '#cc4c02', '#993404', '#662506'])
     .unitId("iso3");
 
 d3.csv("/data/map.countries.csv").then(data => {
