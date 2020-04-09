@@ -16,15 +16,13 @@
 
 .d3-geomap .legend-bg {
   fill: #fff;
-  fill-opacity: .8; }
+  fill-opacity: .6; }
 
 .d3-geomap .legend-bar {
   stroke: #333;
   stroke-width: 1px; }
 
 .d3-geomap .unit:hover{
-  stroke: #fff;
+  stroke: #FFD700;
   stroke-width: 4;
-  background-color: #fff;
-  fill: #fff;
 }
