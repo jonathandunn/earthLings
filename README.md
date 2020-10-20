@@ -5,7 +5,7 @@
 This project visualizes three datasets: 
 	
 	Twitter Corpus 
-		(10.23 billion words, 2017-2020) 
+		(12.42 billion words, 2017-2020) 
 		
 	Corpus of Global Language Use
 		(ISLRN: 951-235-998-601-3)
@@ -28,6 +28,9 @@ For a description of data collection procedures and the language identification 
 	
 For a description of population-based sampling techniques to create unbiased corpora, see this paper:
 	https://jdunn.name/2020/03/08/geographically-balanced-gigaword-corpora-for-50-language-varieties/
+	
+For a study of changes in linguistic diversity during COVID-19, see this paper:
+	https://jdunn.name/2020/10/14/measuring-linguistic-diversity-during-covid-19/
 	
 For a demographic and census-based evaluation of these corpora, see this paper:
 	https://jdunn.name/2019/07/22/mapping-languages-and-demographics-with-georeferenced-corpora/
