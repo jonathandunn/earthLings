@@ -11,7 +11,7 @@ d3.select("#select-key").on("change", function(a) {
   } else if (["Per Capita GDP", "Population Adjusted for GDP", "Twitter Adjusted for GDP", "Web Adjusted for GDP"].includes(currentColumn)) {
       var format = format_small;
   } else {
-      var format = format_mil;
+      var format = format_dec;
   }
   // Redo map
   map.column(currentColumn).format(format).update();
@@ -19,6 +19,11 @@ d3.select("#select-key").on("change", function(a) {
 
 var format_small = function(d) {
     return numberWithCommas(Math.round(d));
+}
+
+var format_dec = function(d) {
+    d = d;
+    return (Math.round(d * 100) / 100).toFixed(2);
 }
 
 var format_mil = function(d) {
