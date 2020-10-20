@@ -1,5 +1,5 @@
 // We define a variable holding the current key to visualize on the map.
-var currentColumn = "Twitter";
+var currentColumn = "Twitter: Change During COVID";
 
 // Listen to changes of the dropdown to select the key to visualize on the map.
 d3.select("#select-key").on("change", function(a) {
