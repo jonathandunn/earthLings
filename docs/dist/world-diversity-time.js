@@ -6,8 +6,8 @@ d3.select("#select-key").on("change", function(a) {
   // Change the current key and call the function to update the colors.
   currentColumn = d3.select(this).property("value");
   // Change number format
-  if (["Percent Internet Access", "Web Adjusted for Population", "Twitter Adjusted for Population"].includes(currentColumn)) {
-      var format = format_per;
+  if (["Twitter: Change During COVID"].includes(currentColumn)) {
+      var format = format_dec;
   } else if (["Per Capita GDP", "Population Adjusted for GDP", "Twitter Adjusted for GDP", "Web Adjusted for GDP"].includes(currentColumn)) {
       var format = format_small;
   } else {
