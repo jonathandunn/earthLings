@@ -1,5 +1,5 @@
 // We define a variable holding the current key to visualize on the map.
-var currentColumn = "Twitter: Change During COVID";
+var currentColumn = "Twitter: N. Languages";
 
 // Listen to changes of the dropdown to select the key to visualize on the map.
 d3.select("#select-key").on("change", function(a) {
@@ -13,7 +13,7 @@ d3.select("#select-key").on("change", function(a) {
   } else if (["Per Capita GDP", "Population Adjusted for GDP", "Twitter Adjusted for GDP", "Web Adjusted for GDP"].includes(currentColumn)) {
       var format = format_small;
   } else {
-      var format = format_dec;
+      var format = format_mil;
   }
   // Redo map
   map.column(currentColumn).format(format).update();
