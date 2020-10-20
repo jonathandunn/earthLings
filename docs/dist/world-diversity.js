@@ -24,7 +24,7 @@ var format_small = function(d) {
 }
 
 var format_hhi = function(d) {
-    return d;
+    return d.toFixed(2);
 }
 
 var format_mil = function(d) {
