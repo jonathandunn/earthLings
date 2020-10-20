@@ -8,6 +8,8 @@ d3.select("#select-key").on("change", function(a) {
   // Change number format
   if (["Percent Internet Access", "Web Adjusted for Population", "Twitter Adjusted for Population"].includes(currentColumn)) {
       var format = format_per;
+  } else if (["Twitter: HHI", "Web: HHI"].includes(currentColumn)) {
+      var format = format_hhi;
   } else if (["Per Capita GDP", "Population Adjusted for GDP", "Twitter Adjusted for GDP", "Web Adjusted for GDP"].includes(currentColumn)) {
       var format = format_small;
   } else {
@@ -19,6 +21,10 @@ d3.select("#select-key").on("change", function(a) {
 
 var format_small = function(d) {
     return numberWithCommas(Math.round(d));
+}
+
+var format_hhi = function(d) {
+    return d;
 }
 
 var format_mil = function(d) {
