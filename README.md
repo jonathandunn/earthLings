@@ -5,7 +5,7 @@
 This project visualizes three datasets: 
 	
 	Twitter Corpus 
-		(22.7 billion words, 2017-2023) 
+		(23.7 billion words, 2017-2023) 
 		
 	Corpus of Global Language Use
 		(ISLRN: 951-235-998-601-3)
