@@ -22,55 +22,29 @@
 <b>Validating the Geo-Referencing of Web Corpora</b>
 </p>
 
-.box {
-  padding: 20px;
-  display: none;
-  margin-top: 20px;
-  border: 1px solid #000;
-}
-.box img {
-  float: right;
-  width: 150px;
-  height: 100px;
-}
-
-$(document).ready(function() {
-  $("select").change(function() {
-    $("select option:selected").each(function() {
-      if ($(this).attr("value") == "Oone") {
-        $(".box").hide();
-        $(".red").show();
-      }
-      if ($(this).attr("value") == "Otwo") {
-        $(".box").hide();
-        $(".green").show();
-      }
-      if ($(this).attr("value") == "Othree") {
-        $(".box").hide();
-        $(".blue").show();
-      }
-    });
-  }).change();
-});
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-<div>
+<p>
+	<div>
   <select>
-    <option style="display: none;">Choose Language</option>
-    <option value="Oone">Option 1</option>
-    <option value="Otwo">Option 2</option>
-    <option value="Othree">Option 3</option>
+    <option style="display: none;">Choose Color</option>
+    <option value="red">Option 1</option>
+    <option value="green">Option 2</option>
+    <option value="blue">Option 3</option>
   </select>
 </div>
-<div class="red box">You have selected <strong>red option</strong> so i am here
-  <img src="http://i46.tinypic.com/2epim8j.jpg" />
+<div class="red box">
+    You have selected <strong>red option</strong> so i am here
+    <img src="http://placehold.it/150x150" />
 </div>
-<div class="green box">You have selected <strong>green option</strong> so i am here
-  <img src="http://i49.tinypic.com/28vepvr.jpg" />
+<div class="green box">
+    You have selected <strong>green option</strong> so i am here
+    <img src="http://placehold.it/150x150" />
 </div>
-<div class="blue box">You have selected <strong>blue option</strong> so i am here
-  <img src="http://i50.tinypic.com/f0ud01.jpg" />
+<div class="blue box">
+    You have selected <strong>blue option</strong> so i am here
+    <img src="http://placehold.it/150x150" />
 </div>
+
+</p>
 	
 <div id="map" class="d3-geomap" style="border:1px solid black;"></div>
 <div w3-include-html="/files/footer.html"></div>
