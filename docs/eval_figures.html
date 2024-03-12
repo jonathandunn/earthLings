@@ -29,7 +29,13 @@
         case "bul" :
             document.getElementById("status").options[0]=new Option("Select status","");
             document.getElementById("status").options[1]=new Option("Bulgaria","Bulgaria");
-
+	    document.getElementById("status").options[2] = null;
+	    document.getElementById("status").options[3] = null;
+        case "cat" :
+            document.getElementById("status").options[0]=new Option("Select status","");
+            document.getElementById("status").options[1]=new Option("Andorra","Andorra");
+	    document.getElementById("status").options[2]=new Option("Spain","Spain");
+	    document.getElementById("status").options[3] = null;
             break;
         }
         return true;
