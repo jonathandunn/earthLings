@@ -12,7 +12,7 @@
 	</script>
 	<script src="/dist/includes.js"></script>
 	<div w3-include-html="/files/head.html"></div>
-	<style>#wrapper, img{width:80%;}</style>
+	<style>#wrapper, img{width:40%;}</style>
         <style>.aligncenter {text-align: center;}</style>
 
 	<script language="javascript" type="text/javascript">
@@ -697,13 +697,19 @@ document.getElementById('form').addEventListener('submit', (e) => {
   window.location.href = url + "?lang="+ source + "&country=" + status;
 });
 </script>
-<div id="wrapper", style="text-align: center;">
-<p id="figure1", style="text-align: center;", class="aligncenter"></p>
-</div>
+<table>
+  <tr>
+    <div id="wrapper", style="text-align: center;">
+	<p id="figure1", style="text-align: center;", class="aligncenter"></p>
+	</div>
+  </tr>
+<tr>
+    <div id="wrapper", style="text-align: center;">
+	<p id="figure2", style="text-align: center;", class="aligncenter"></p>
+	</div>
+  </tr>
+</table>
 
-<div id="wrapper", style="text-align: center;">
-<p id="figure2", style="text-align: center;", class="aligncenter"></p>
-</div>
 	
 <script>
 function getUrlParameter(sParam)
