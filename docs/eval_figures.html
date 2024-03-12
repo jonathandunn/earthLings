@@ -22,6 +22,48 @@
 <i>Choose a language and country for visualizing the impact of cleaning methods.</i><br>
 </p>
 
+ <script language="javascript" type="text/javascript">
+    function dynamicdropdown(listindex)
+    {
+        switch (listindex)
+        {
+        case "manual" :
+            document.getElementById("status").options[0]=new Option("Select status","");
+            document.getElementById("status").options[1]=new Option("OPEN","open");
+            document.getElementById("status").options[2]=new Option("DELIVERED","delivered");
+            break;
+        case "online" :
+            document.getElementById("status").options[0]=new Option("Select status","");
+            document.getElementById("status").options[1]=new Option("OPEN","open");
+            document.getElementById("status").options[2]=new Option("DELIVERED","delivered");
+            document.getElementById("status").options[3]=new Option("SHIPPED","shipped");
+            break;
+        }
+        return true;
+    }
+    </script>
+    </head>
+    <title>Dynamic Drop Down List</title>
+    <body>
+    <div class="category_div" id="category_div">Source:
+        <select id="source" name="source" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
+        <option value="">Select source</option>
+        <option value="manual">MANUAL</option>
+        <option value="online">ONLINE</option>
+        </select>
+    </div>
+    <div class="sub_category_div" id="sub_category_div">Status:
+        <script type="text/javascript" language="JavaScript">
+        document.write('<select name="status" id="status"><option value="">Select status</option></select>')
+        </script>
+        <noscript>
+        <select id="status" name="status">
+            <option value="open">OPEN</option>
+            <option value="delivered">DELIVERED</option>
+        </select>
+        </noscript>
+    </div>
+
 <div id="wrapper">
 <p id="figure1", style="text-align: center;"></p>
 </div>
@@ -51,8 +93,8 @@ var lang = getUrlParameter('lang');
 var country = getUrlParameter('country');
 var figure1 = "/data/eval_figures/" + lang + "/similarity.lid." + lang + "." + country + ".png";
 var figure2 = "/data/eval_figures/" + lang + "/similarity.tw." + lang + "." + country + ".png";
-document.getElementById("figure1").innerHTML="<img src="+figure1+" align='middle'>"
-document.getElementById("figure2").innerHTML="<img src="+figure2+" align='middle'>"
+document.getElementById("figure1").innerHTML="<img src="+figure1+" align='center'>"
+document.getElementById("figure2").innerHTML="<img src="+figure2+" align='center'>"
 </script>
 
 <p style="text-align: center;">
