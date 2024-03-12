@@ -2,7 +2,7 @@
 var currentColumn = "Agreement";
 
 // Listen to changes of the dropdown to select the key to visualize on the map.
-d3.select('#select-type').on('change', function(a) {
+d3.select('#select-key').on('change', function(a) {
   // Change the current key and call the function to update the colors.
   currentType = d3.select(this).property('value');
   currentColumn = currentType
