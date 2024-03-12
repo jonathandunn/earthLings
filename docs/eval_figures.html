@@ -13,6 +13,8 @@
 	<script src="/dist/includes.js"></script>
 	<div w3-include-html="/files/head.html"></div>
 	<style>#wrapper, img{width:80%;}</style>
+        <style>.aligncenter {text-align: center;}</style>
+
 	<script language="javascript" type="text/javascript">
     function dynamicdropdown(listindex)
     {
@@ -40,7 +42,6 @@
 
 <p style="text-align: center;">
 <i>Choose a language and country for visualizing the impact of cleaning methods.</i><br>
-</p>
 
     <div class="category_div" id="category_div">Source:
         <select id="source" name="source" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
@@ -60,13 +61,14 @@
         </select>
         </noscript>
     </div>
-
+</p>
+	
 <div id="wrapper">
-<p id="figure1", style="text-align: center;"></p>
+<p id="figure1", style="text-align: center;", class="aligncenter"></p>
 </div>
 
 <div id="wrapper">
-<p id="figure2", style="text-align: center;"></p>
+<p id="figure2", style="text-align: center;", class="aligncenter"></p>
 </div>
 	
 <script>
