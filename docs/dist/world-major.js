@@ -1,7 +1,7 @@
 // We define a variable holding the current key to visualize on the map.
-var currentColumn = 'Total Words in Web Corpus eng';
+var currentColumn = 'Total Words in Web4.3 eng';
 var currentType = 'Total Words in ';
-var currentData = 'Web Corpus ';
+var currentData = 'Web4.3 ';
 var currentLanguage = 'eng';
 
 // Listen to changes of the dropdown to select the key to visualize on the map.
