@@ -139,8 +139,8 @@ document.getElementById('form').addEventListener('submit', (e) => {
     e.preventDefault();
   let source = document.getElementById('source').value;
   let status = document.getElementById('status').value;
-  console.log(url + "?lang="+ source + "?country=" + status);
-  window.location.href = url + "?lang="+ source + "?country=" + status;
+  console.log(url + "?lang="+ source + "&country=" + status);
+  window.location.href = url + "?lang="+ source + "&country=" + status;
 });
 </script>
 <div id="wrapper">
