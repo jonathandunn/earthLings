@@ -20,9 +20,16 @@
 <p style="text-align: center;">
 <i>Using geo-referenced tweets as a point of comparison for geo-referenced web data.</i><br>
 </p>
+	
+<script>
+var header = getUrlParameter('name');
+document.getElementById('name').innerHTML = name;
+</script>
 
+<p id="name"></p>
+	
 <p style="text-align: center;">
-
+Work?
 </p>
 	
 <div w3-include-html="/files/footer.html"></div>
@@ -35,7 +42,7 @@
 <script src="/dist/d3.js"></script>
 <script src="/dist/topojson.js"></script>
 <script src="/dist/d3-geomap.js"></script>
-<script src="/dist/world-similarity-register.js"></script>	
+<script src="/dist/select_fig.js"></script>	
 <script type = "text/javascript">
 		function changeData(){
 		var selData = document.getElementById("selData");
