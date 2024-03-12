@@ -1,6 +1,14 @@
 // We define a variable holding the current key to visualize on the map.
 var currentColumn = "Agreement";
 
+// Listen to changes of the dropdown to select the key to visualize on the map.
+d3.select('#select-type').on('change', function(a) {
+  // Change the current key and call the function to update the colors.
+  currentType = d3.select(this).property('value');
+  currentColumn = currentType
+  // Redo map
+  map.column(currentColumn).format(format).update()
+});
 
 var format_small = function(d) {
     return numberWithCommas(Math.round(d));
