@@ -21,7 +21,7 @@
 <i>Using geo-referenced tweets as a point of comparison for geo-referenced web data.</i><br>
 </p>
 	
-<p id="figure"></p>
+<p id="figure", style="text-align: center;"></p>
 
 <script>
 function getUrlParameter(sParam)
@@ -41,13 +41,14 @@ function getUrlParameter(sParam)
 
 <script>
 var figure = getUrlParameter('figure');
-document.getElementById('figure').innerHTML = figure;
+var figure1 = "/data/eval_figures/" + figure + "/similarity.lid." + figure + ".Albania.png.png";
+document.getElementById("figure").innerHTML="<img src='+figure1+'>"
 </script>
 
 
 	
 <p style="text-align: center;">
-does it Work?
+does it Worknow?
 </p>
 	
 <div w3-include-html="/files/footer.html"></div>
@@ -60,7 +61,6 @@ does it Work?
 <script src="/dist/d3.js"></script>
 <script src="/dist/topojson.js"></script>
 <script src="/dist/d3-geomap.js"></script>
-<script src="/dist/select_fig.js"></script>	
 <script type = "text/javascript">
 		function changeData(){
 		var selData = document.getElementById("selData");
