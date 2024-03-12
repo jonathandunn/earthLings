@@ -2,6 +2,11 @@
 <html lang="en">
 <meta charset="utf-8">
 
+#wrapper, img{
+    width:100%;
+    height: 100%;
+}
+
 <head>
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-70470337-2"></script>
 	<script type = "text/javascript">
@@ -20,9 +25,11 @@
 <p style="text-align: center;">
 <i>Using geo-referenced tweets as a point of comparison for geo-referenced web data.</i><br>
 </p>
-	
-<p id="figure", style="text-align: center;"></p>
 
+<div id="wrapper">
+<p id="figure", style="text-align: center;"></p>
+</div>
+	
 <script>
 function getUrlParameter(sParam)
 {
