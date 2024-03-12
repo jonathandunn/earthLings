@@ -19,7 +19,7 @@
 <div w3-include-html="/files/header.html"></div>
 
 <p style="text-align: center;">
-<i>Using geo-referenced tweets as a point of comparison for geo-referenced web data.</i><br>
+<i>Choose a language and country for visualizing the impact of cleaning methods.</i><br>
 </p>
 
 <div id="wrapper">
@@ -51,8 +51,8 @@ var lang = getUrlParameter('lang');
 var country = getUrlParameter('country');
 var figure1 = "/data/eval_figures/" + lang + "/similarity.lid." + lang + "." + country + ".png";
 var figure2 = "/data/eval_figures/" + lang + "/similarity.tw." + lang + "." + country + ".png";
-document.getElementById("figure1").innerHTML="<img src="+figure1+">"
-document.getElementById("figure2").innerHTML="<img src="+figure2+">"
+document.getElementById("figure1").innerHTML="<img src="+figure1+" align="middle">"
+document.getElementById("figure2").innerHTML="<img src="+figure2+" align="middle">"
 </script>
 
 <p style="text-align: center;">
