@@ -1,5 +1,5 @@
 // We define a variable holding the current key to visualize on the map.
-var currentColumn = 'Total Words in Web Corpus aai';
+var currentColumn = 'Total Words in Web4.3 aai';
 var currentType = 'Total Words in ';
 var currentData = 'Web Corpus ';
 var currentLanguage = 'aai';
