@@ -93,7 +93,7 @@
 <p style="text-align: center;">
 <i>Choose a language and country for visualizing the impact of cleaning methods.</i><br>
 
-    <div class="category_div" id="category_div">Language:
+    <div class="category_div" id="category_div", style="text-align: center;">Language:
         <select id="source" name="source" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
         <option value="">Select language</option>
         <option value="ara">ara</option>
@@ -135,7 +135,7 @@
 	<option value="zho">zho</option>
         </select>
     </div>
-    <div class="sub_category_div" id="sub_category_div">Status:
+    <div class="sub_category_div" id="sub_category_div", style="text-align: center;">Status:
         <script type="text/javascript" language="JavaScript">
         document.write('<select name="status" id="status"><option value="">Select status</option></select>')
         </script>
@@ -162,11 +162,11 @@ document.getElementById('form').addEventListener('submit', (e) => {
   window.location.href = url + "?lang="+ source + "&country=" + status;
 });
 </script>
-<div id="wrapper">
+<div id="wrapper", style="text-align: center;">
 <p id="figure1", style="text-align: center;", class="aligncenter"></p>
 </div>
 
-<div id="wrapper">
+<div id="wrapper", style="text-align: center;">
 <p id="figure2", style="text-align: center;", class="aligncenter"></p>
 </div>
 	
