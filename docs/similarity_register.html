@@ -2,11 +2,6 @@
 <html lang="en">
 <meta charset="utf-8">
 
-#wrapper, img{
-    width:100%;
-    height: 100%;
-}
-
 <head>
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-70470337-2"></script>
 	<script type = "text/javascript">
@@ -17,6 +12,7 @@
 	</script>
 	<script src="/dist/includes.js"></script>
 	<div w3-include-html="/files/head.html"></div>
+	<style>#wrapper, img{width:80%;}</style>
 </head>
 
 <body>
@@ -27,7 +23,11 @@
 </p>
 
 <div id="wrapper">
-<p id="figure", style="text-align: center;"></p>
+<p id="figure1", style="text-align: center;"></p>
+</div>
+
+<div id="wrapper">
+<p id="figure2", style="text-align: center;"></p>
 </div>
 	
 <script>
@@ -47,9 +47,11 @@ function getUrlParameter(sParam)
 </script>
 
 <script>
-var figure = getUrlParameter('figure');
-var figure1 = "/data/eval_figures/" + figure + "/similarity.lid." + figure + ".Albania.png";
-document.getElementById("figure").innerHTML="<img src="+figure1+">"
+var lang = getUrlParameter('lang');
+var country = getUrlParameter('country');
+var figure1 = "/data/eval_figures/" + figure + "/similarity.lid." + figure + "." + country + ".png";
+var figure2 = "/data/eval_figures/" + figure + "/similarity.tw." + figure + "." + country + ".png";
+document.getElementById("figure1").innerHTML="<img src="+figure1+">"
 </script>
 
 
