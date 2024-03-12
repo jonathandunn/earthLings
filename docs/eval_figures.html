@@ -738,6 +738,9 @@ document.getElementById("figure2").innerHTML="<img src="+figure2+" align='center
 </script>
 	
 <div w3-include-html="/files/footer.html"></div>
+	<p>
+		These figures are used to validate this particular language-country sub-corpus. The figure on the left compares the web corpus to ground-truth data from this language used for training language identification models. The figure on the right compares the web corpus to geo-referenced tweets, whose geographic precision we have more confidence in. The violin plots are using <a href="https://jdunn.name/2022/06/09/corpus-similarity-measures-remain-robust-across-diverse-languages/">corpus similarity measures</a> to find out how consistently similar these data sets are. Each figure shows the web corpus after multiple rounds of cleaning, as described <a href="https://jdunn.name/2024/03/13/validating-and-exploring-large-geographic-corpora/">in this paper</a>. Thus, better corpora will (i) have a higher similarity and (ii) will have a more homogenous range of similarity values.
+	</p>
 </body>
 
 <script src="/dist/bluebird.min.js"></script>
