@@ -20,16 +20,16 @@
     {
         switch (listindex)
         {
-        case "manual" :
+        case "ara" :
             document.getElementById("status").options[0]=new Option("Select status","");
-            document.getElementById("status").options[1]=new Option("OPEN","open");
-            document.getElementById("status").options[2]=new Option("DELIVERED","delivered");
+            document.getElementById("status").options[1]=new Option("Morocco","Morocco");
+            document.getElementById("status").options[2]=new Option("Saudi Arabia","Saudi_Arabia");
+	    document.getElementById("status").options[3]=new Option("Syria","Syria");
             break;
-        case "online" :
+        case "bul" :
             document.getElementById("status").options[0]=new Option("Select status","");
-            document.getElementById("status").options[1]=new Option("OPEN","open");
-            document.getElementById("status").options[2]=new Option("DELIVERED","delivered");
-            document.getElementById("status").options[3]=new Option("SHIPPED","shipped");
+            document.getElementById("status").options[1]=new Option("Bulgaria","Bulgaria");
+
             break;
         }
         return true;
@@ -43,11 +43,46 @@
 <p style="text-align: center;">
 <i>Choose a language and country for visualizing the impact of cleaning methods.</i><br>
 
-    <div class="category_div" id="category_div">Source:
+    <div class="category_div" id="category_div">Language:
         <select id="source" name="source" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
-        <option value="">Select source</option>
-        <option value="manual">MANUAL</option>
-        <option value="online">ONLINE</option>
+        <option value="">Select language</option>
+        <option value="ara">ara</option>
+        <option value="bul">bul</option>
+	<option value="cat">cat</option>
+	<option value="ces">ces</option>
+	<option value="dan">dan</option>
+	<option value="deu">deu</option>
+	<option value="ell">ell</option>
+	<option value="eng">eng</option>
+	<option value="est">est</option>
+	<option value="fin">fin</option>
+	<option value="fra">fra</option>
+	<option value="hin">hin</option>
+	<option value="hun">hun</option>
+	<option value="ind">ind</option>
+	<option value="isl">isl</option>
+	<option value="ita">ita</option>
+	<option value="jpn">jpn</option>
+	<option value="kor">kor</option>
+	<option value="lav">lav</option>
+	<option value="lit">lit</option>
+	<option value="mal">mal</option>
+	<option value="mkd">mkd</option>
+	<option value="nld">nld</option>
+	<option value="nor">nor</option>
+	<option value="pol">pol</option>
+	<option value="por">por</option>
+	<option value="ron">ron</option>
+	<option value="rus">rus</option>
+	<option value="slv">slv</option>
+	<option value="spa">spa</option>
+	<option value="sqi">sqi</option>
+	<option value="swe">swe</option>
+	<option value="tgl">tgl</option>
+	<option value="ukr">ukr</option>
+	<option value="urd">urd</option>
+	<option value="vie">vie</option>
+	<option value="zho">zho</option>
         </select>
     </div>
     <div class="sub_category_div" id="sub_category_div">Status:
@@ -56,8 +91,9 @@
         </script>
         <noscript>
         <select id="status" name="status">
-            <option value="open">OPEN</option>
-            <option value="delivered">DELIVERED</option>
+            <option value="Morocco">Morocco</option>
+            <option value="Saudi_Arabia">Saudi Arabia</option>
+	    <option value="Syria">Syria</option>
         </select>
         </noscript>
     </div>
