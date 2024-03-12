@@ -13,16 +13,7 @@
 	<script src="/dist/includes.js"></script>
 	<div w3-include-html="/files/head.html"></div>
 	<style>#wrapper, img{width:80%;}</style>
-</head>
-
-<body>
-<div w3-include-html="/files/header.html"></div>
-
-<p style="text-align: center;">
-<i>Choose a language and country for visualizing the impact of cleaning methods.</i><br>
-</p>
-
- <script language="javascript" type="text/javascript">
+	<script language="javascript" type="text/javascript">
     function dynamicdropdown(listindex)
     {
         switch (listindex)
@@ -42,9 +33,15 @@
         return true;
     }
     </script>
-    </head>
-    <title>Dynamic Drop Down List</title>
-    <body>
+</head>
+
+<body>
+<div w3-include-html="/files/header.html"></div>
+
+<p style="text-align: center;">
+<i>Choose a language and country for visualizing the impact of cleaning methods.</i><br>
+</p>
+
     <div class="category_div" id="category_div">Source:
         <select id="source" name="source" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
         <option value="">Select source</option>
