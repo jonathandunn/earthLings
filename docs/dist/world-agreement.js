@@ -7,7 +7,7 @@ d3.select('#select-key').on('change', function(a) {
   currentType = d3.select(this).property('value');
   currentColumn = currentType
   // Redo map
-  map.column(currentColumn).format(format).update()
+  map.column(currentColumn).update()
 });
 
 var format_small = function(d) {
