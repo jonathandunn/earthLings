@@ -11,6 +11,28 @@ d3.select('#select-key').on('change', function(a) {
   map.column(currentColumn).update()
 });
 
+var format_small = function(d) {
+    return numberWithCommas(Math.round(d));
+}
+
+var format_hhi = function(d) {
+    return (Math.round(d * 100) / 100).toFixed(2);
+}
+
+var format_mil = function(d) {
+    d = d;
+    return d3.format(',.00f')(d);
+}
+
+var format_per = function(d) {
+    d = d * 100;
+    return d3.format(',.01f')(d) + '%';
+}
+
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 var format_dec = function(d) {
     d = d;
     return (Math.round(d * 100) / 100).toFixed(3);
