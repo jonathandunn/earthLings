@@ -20,9 +20,12 @@
 <p style="text-align: center;">
 <i>Do large language models work equally well across different populations?</i><br>
 <select id="select-key" class="three columns">
-	<option value="Agreement">Twitter: Dunn (2020) vs Dunn & Nijhof (2022)</option>
-	<option value="Agreement_Web">Web: Dunn (2020) vs Dunn & Nijhof (2022)</option>
-	<option value="Agreement_TW">Twitter: Geographic vs Non-Geographic LID)</option>
+	<option value="facebook_opt-2.7b">OPT 2.7b (Facebook)</option>
+	<option value="facebook_opt-350m">OPT 350m (Facebook)</option>
+	<option value="facebook_opt-1.3b">OPT 1.3b (Facebook)</option>
+	<option value="bigscience_bloom-560m">Bloom 560m (BigScience)</option>
+	<option value="bigscience_bloom-1b7">Bloom 1.7b (BigScience)</option>
+	<option value="bigscience_bloom-3b">Bloom 3b (BigScience)</option>
 </select>
 <br>
 <br>This visualizes the average perplexity for otherwise comparable test corpora from different countries. Lower values indicate a better fit. Taken from this paper <a href="https://jdunn.name/2024/03/13/pre-trained-language-models-represent-some-geographic-populations-better-than-others/">Dunn, et al. (2024). "Pre-Trained Language Models Represent Some Geographic Populations Better Than Others."</a>
