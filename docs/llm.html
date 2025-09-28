@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+
+<head>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-70470337-2"></script>
+	<script type = "text/javascript">
+	  window.dataLayer = window.dataLayer || [];
+  	  function gtag(){dataLayer.push(arguments);}
+  	  gtag('js', new Date());
+  	  gtag('config', 'UA-70470337-2');
+	</script>
+	<script src="/dist/includes.js"></script>
+	<div w3-include-html="/files/head.html"></div>
+</head>
+
+<body>
+<div w3-include-html="/files/header.html"></div>
+	
+<p style="text-align: center;">
+<i>Do large language models work equally well across different populations?</i><br>
+<select id="select-key" class="three columns">
+	<option value="Agreement">Twitter: Dunn (2020) vs Dunn & Nijhof (2022)</option>
+	<option value="Agreement_Web">Web: Dunn (2020) vs Dunn & Nijhof (2022)</option>
+	<option value="Agreement_TW">Twitter: Geographic vs Non-Geographic LID)</option>
+</select>
+<br>
+<br>This visualizes the average perplexity for otherwise comparable test corpora from different countries. Lower values indicate a better fit. Taken from this paper <a href="https://jdunn.name/2024/03/13/pre-trained-language-models-represent-some-geographic-populations-better-than-others/">Dunn, et al. (2024). "Pre-Trained Language Models Represent Some Geographic Populations Better Than Others."</a>
+</p>
+
+<div id="map" class="d3-geomap" style="border:1px solid black;"></div>
+<div w3-include-html="/files/footer.html"></div>
+</body>
+
+<script src="/dist/bluebird.min.js"></script>
+<script src="/dist/fetch.js"></script>		
+<script src="/dist/jquery.js"></script>
+<script src="/dist/bootstrap.js"></script>
+<script src="/dist/d3.js"></script>
+<script src="/dist/topojson.js"></script>
+<script src="/dist/d3-geomap.js"></script>
+<script src="/dist/world-llm.js"></script>
+<script type = "text/javascript">
+		function changeData(){
+		var selData = document.getElementById("selData");
+		var data_suffix = selData.value;
+ 		}
+</script>
+<script>includeHTML();</script>	
+</html>
